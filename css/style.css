@@ -39,16 +39,18 @@ a { text-decoration: none; color: inherit; }
 .logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--swiggy-orange);
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: 800;
-  font-size: 20px;
   flex-shrink: 0;
 }
+
+.logo-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
 
 .location-dropdown {
   display: flex;
@@ -554,3 +556,4 @@ a { text-decoration: none; color: inherit; }
 .signin-btn-orange:hover {
   background: #e5730f;
 }
+
