@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/UI-ARENA-UI-CLONE-CHA/',
+  base: '/UI-Arena-UI-Clone-Challenge/',
 })
