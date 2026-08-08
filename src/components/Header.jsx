@@ -1,4 +1,5 @@
 import { useCart } from "../CartContext";
+import { onImgError } from "../data";
 
 export default function Header({ onOpenSignIn, showTopSearch = true }) {
   const { cartCount } = useCart();
@@ -7,16 +8,16 @@ export default function Header({ onOpenSignIn, showTopSearch = true }) {
     <header className="topbar">
       <div className="topbar-inner">
         <a href="#/" className="logo">
-          <span className="logo-mark">
-            <svg width="18" height="18" viewBox="0 0 24 24">
-              <path
-                d="M12 4.2c-2.1 0-3.5 1.6-3.5 3.6 0 1.7 1 3 2.4 3.6v8.2a1.1 1.1 0 0 0 2.2 0v-8.2c1.4-.6 2.4-1.9 2.4-3.6 0-2-1.4-3.6-3.5-3.6z"
-                fill="#fff"
-              />
-            </svg>
-          </span>
-          <span>Swiggy</span>
-        </a>
+  <img
+    src="https://w7.pngwing.com/pngs/55/100/png-transparent-swiggy-hd-logo-thumbnail.png"
+    alt="Swiggy"
+    width="28"
+    height="40"
+    style={{ borderRadius: "8px", objectFit: "cover", flexShrink: 0 }}
+    onError={onImgError}
+  />
+  <span>Swiggy</span>
+</a>
 
         <div className="location-pill">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-7.5 8-13a8 8 0 1 0-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
