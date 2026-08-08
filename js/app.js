@@ -23,7 +23,7 @@ const restaurants = [
                 name: "Chicken Biryani",
                 price: 299,
                 description: "Aromatic basmati rice cooked with tender chicken and traditional spices.",
-                image: "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=500"
+                image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=800&q=80"
             },
             {
                 id: 102,
@@ -83,7 +83,7 @@ const restaurants = [
                 name: "Cheese Burger",
                 price: 179,
                 description: "Juicy burger topped with melted cheese.",
-                image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=500"
+                image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
             },
             {
                 id: 203,
@@ -214,7 +214,7 @@ const restaurants = [
                 name: "Hyderabadi Chicken Biryani",
                 price: 299,
                 description: "Traditional Hyderabadi dum biryani.",
-                image: "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=500"
+                image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=800&q=80"
             },
             {
                 id: 502,
