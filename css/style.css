@@ -6,14 +6,42 @@ body { font-family: Arial, sans-serif; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
-  border-bottom: 1px solid #eee;
+  padding: 14px 40px;
+  border-bottom: 1px solid #e9e9eb;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  width: 36px;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3d4152;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #FC8019;
+}
+
+#signin-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .hero {
@@ -37,6 +65,38 @@ body { font-family: Arial, sans-serif; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.2s;
+}
+
+.card-img-wrap {
+  position: relative;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 24px 10px 8px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #48c479;
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 .restaurant-card:hover {
@@ -169,17 +229,49 @@ body { font-family: Arial, sans-serif; }
   max-width: 700px;
 }
 
-.faq-item {
-  padding: 20px 0;
+.help-banner {
+  background: #2b6777;
+  color: white;
+  padding: 50px 60px;
+}
+
+.help-body {
+  display: flex;
+  gap: 40px;
+  padding: 30px 60px;
+}
+
+.help-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.help-nav-item {
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.help-nav-item.active {
+  background: #f1f1f3;
+  font-weight: 700;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
   border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.faq-item h3 {
-  margin-bottom: 8px;
-}
-
-.faq-item p {
-  color: #666;
+.faq-answer {
+  font-size: 13px;
+  color: #93959f;
+  margin-top: 6px;
+  padding-left: 2px;
 }
 
 .search-page {
