@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Menu - Foodie</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <a href="../index.html" class="logo">
+        <span>food</span>ie
+    </a>
+
+    <div class="location">
+        <span class="location-icon">📍</span>
+        <div>
+            <small>Delivering to</small>
+            <strong>Kerala, India ▾</strong>
+        </div>
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="search.html">
+            🔍 Search
+        </a>
+
+        <a href="../index.html">
+            🏠 Home
+        </a>
+
+        <a href="help.html">
+            ❓ Help
+        </a>
+
+        <a href="cart.html" class="cart-link">
+            🛒 Cart
+            <span id="cartCount" class="cart-count">0</span>
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= RESTAURANT HEADER ================= -->
+
+<main>
+
+<section class="restaurant-page-header">
+
+    <div>
+
+        <p class="section-label">
+            RESTAURANT
+        </p>
+
+        <h1 id="restaurantName">
+            Big Bowl Kitchen
+        </h1>
+
+        <p id="restaurantDescription">
+            Burgers, American, Fast Food
+        </p>
+
+        <div class="restaurant-page-meta">
+
+            <span>★ 4.5</span>
+
+            <span>•</span>
+
+            <span>25-30 mins</span>
+
+            <span>•</span>
+
+            <span>₹250 for two</span>
+
+        </div>
+
+    </div>
+
+    <div class="restaurant-hero-food">
+        🍔
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menu-section">
+
+    <div class="menu-title">
+
+        <div>
+            <p class="section-label">MENU</p>
+            <h2>Recommended</h2>
+        </div>
+
+        <span class="menu-count">
+            6 items
+        </span>
+
+    </div>
+
+
+    <div class="menu-list">
+
+
+        <!-- ITEM 1 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="veg-icon">●</span>
+
+                <h3>Classic Cheese Burger</h3>
+
+                <strong>₹149</strong>
+
+                <p>
+                    Juicy crispy burger with fresh vegetables,
+                    cheese and our special sauce.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.6
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🍔
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Classic Cheese Burger',
+                        149,
+                        '🍔'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 2 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="veg-icon">●</span>
+
+                <h3>Double Patty Burger</h3>
+
+                <strong>₹199</strong>
+
+                <p>
+                    Double grilled patties layered with cheese,
+                    lettuce and signature burger sauce.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.7
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🍔
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Double Patty Burger',
+                        199,
+                        '🍔'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 3 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="nonveg-icon">●</span>
+
+                <h3>Crispy Chicken Burger</h3>
+
+                <strong>₹229</strong>
+
+                <p>
+                    Crispy chicken fillet with lettuce,
+                    cheese and creamy mayo.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.5
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🍗
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Crispy Chicken Burger',
+                        229,
+                        '🍗'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 4 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="veg-icon">●</span>
+
+                <h3>Peri Peri Fries</h3>
+
+                <strong>₹119</strong>
+
+                <p>
+                    Golden crispy fries tossed with spicy
+                    peri peri seasoning.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.4
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🍟
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Peri Peri Fries',
+                        119,
+                        '🍟'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 5 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="veg-icon">●</span>
+
+                <h3>Chocolate Thick Shake</h3>
+
+                <strong>₹139</strong>
+
+                <p>
+                    Rich chocolate milkshake topped with
+                    creamy chocolate sauce.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.8
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🥤
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Chocolate Thick Shake',
+                        139,
+                        '🥤'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 6 -->
+
+        <article class="menu-item">
+
+            <div class="menu-item-details">
+
+                <span class="veg-icon">●</span>
+
+                <h3>Loaded Cheese Fries</h3>
+
+                <strong>₹169</strong>
+
+                <p>
+                    Crispy fries loaded with melted cheese
+                    and special seasoning.
+                </p>
+
+                <span class="menu-rating">
+                    ★ 4.5
+                </span>
+
+            </div>
+
+            <div class="menu-item-action">
+
+                <div class="food-emoji">
+                    🧀
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart(
+                        'Loaded Cheese Fries',
+                        169,
+                        '🧀'
+                    )">
+
+                    ADD
+
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= CART BAR ================= -->
+
+<div id="cartBar" class="cart-bar">
+
+    <div>
+        <strong>
+            <span id="cartBarCount">0</span> items
+        </strong>
+
+        <small>
+            Added to your cart
+        </small>
+    </div>
+
+    <a href="cart.html">
+        View Cart →
+    </a>
+
+</div>
+
+
+<script src="../js/app.js"></script>
+
+</body>
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<<div class="page-navigation">
+
+    <button
+        onclick="goBack()"
+        class="back-button"
+    >
+        ← Back
+    </button>
+
+    <a
+        href="../index.html"
+        class="home-button"
+    >
+        🏠 Home
+    </a>
+
+</div>
+</html>
