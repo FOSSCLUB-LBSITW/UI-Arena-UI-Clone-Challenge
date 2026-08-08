@@ -1,3 +1,5 @@
+// --- Sign-in drawer ---
+
 const signinBtn = document.getElementById('signin-btn');
 const drawer = document.getElementById('signin-drawer');
 const overlay = document.getElementById('drawer-overlay');
@@ -11,6 +13,60 @@ if (signinBtn && drawer && overlay) {
   overlay.addEventListener('click', () => {
     drawer.classList.remove('open');
     overlay.classList.remove('open');
+  });
+}
+
+// --- Shared restaurant data ---
+
+const restaurants = [
+  { name: "Punjabi Tadka", cuisine: "North Indian, Chinese", rating: "4.3", time: "30 mins", img: "assets/images/restaurant1.jpg",
+    items: ["Paneer Butter Masala", "Butter Chicken", "Dal Makhani", "Chole Bhature", "Veg Fried Rice"] },
+  { name: "Sagar Ratna", cuisine: "South Indian, Dosa", rating: "4.1", time: "25 mins", img: "assets/images/restaurant2.jpg",
+    items: ["Masala Dosa", "Idli Sambar", "Uttapam", "Vada", "Filter Coffee"] },
+  { name: "Pizza Junction", cuisine: "Italian, Pizza, Fast Food", rating: "4.5", time: "35 mins", img: "assets/images/restaurant3.jpg",
+    items: ["Margherita Pizza", "Pepperoni Pizza", "Garlic Bread", "Pasta Alfredo", "Cheesy Fries"] },
+  { name: "Biryani House", cuisine: "Biryani, Mughlai", rating: "4.2", time: "40 mins", img: "assets/images/restaurant4.jpg",
+    items: ["Chicken Biryani", "Mutton Biryani", "Veg Biryani", "Kebab Platter", "Raita"] },
+  { name: "Sweet Corner", cuisine: "Desserts, Bakery", rating: "4.6", time: "20 mins", img: "assets/images/restaurant5.jpg",
+    items: ["Gulab Jamun", "Rasmalai", "Chocolate Cake", "Brownie", "Ice Cream"] }
+];
+
+// --- Search page ---
+
+function renderResults(list) {
+  const resultsDiv = document.getElementById('search-results');
+  if (!resultsDiv) return; // not on search.html, skip
+
+  if (list.length === 0) {
+    resultsDiv.innerHTML = '<p>No restaurants found.</p>';
+    return;
+  }
+
+  resultsDiv.innerHTML = list.map(r => `
+    <a href="restaurant.html" class="restaurant-card">
+      <img src="${r.img}" alt="${r.name}">
+      <div class="card-info">
+        <h3>${r.name}</h3>
+        <p class="rating">⭐ ${r.rating} · ${r.time}</p>
+        <p class="cuisine">${r.cuisine}</p>
+      </div>
+    </a>
+  `).join('');
+}
+
+const searchInput = document.getElementById('search-input');
+
+if (searchInput) {
+  renderResults(restaurants); // show all restaurants initially
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    const filtered = restaurants.filter(r =>
+      r.name.toLowerCase().includes(query) ||
+      r.cuisine.toLowerCase().includes(query) ||
+      r.items.some(item => item.toLowerCase().includes(query))
+    );
+    renderResults(filtered);
   });
 }
 
@@ -39,7 +95,6 @@ function addToCart(name, price) {
   alert(name + " added to cart!");
 }
 
-// Attach click listeners to all ADD buttons (only runs if they exist on this page)
 document.querySelectorAll('.add-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const name = btn.dataset.name;
