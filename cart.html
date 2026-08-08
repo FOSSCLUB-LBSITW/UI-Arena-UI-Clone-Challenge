@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Cart | Swiggy Clone</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -12,18 +13,18 @@
   <div class="header-inner">
     <a class="logo" href="index.html">Swiggy<span style="color:var(--dark)">.</span></a>
     <div class="location-pill">
-      <span class="label">📍 Home <span style="color:var(--gray);">▾</span></span>
+      <span class="label"><i class="fa-solid fa-location-dot"></i> Home <span class="chev">▾</span></span>
       <span class="sub">Kazhakkoottam, Thiruvananthapuram, Kerala</span>
     </div>
     <label class="header-search">
-      🔍 <input type="text" placeholder="Search for restaurants and food" onclick="location.href='search.html'" readonly>
+      <i class="fa-solid fa-magnifying-glass"></i> <input type="text" placeholder="Search for restaurants and food" onclick="location.href='search.html'" readonly>
     </label>
-    <button class="hamburger" aria-label="Menu">☰</button>
+    <button class="hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
     <nav class="header-nav">
-      <a class="nav-link" href="search.html">🔍 <span class="label">Search</span></a>
-      <a class="nav-link" href="help.html">❓ <span class="label">Help</span></a>
-      <a class="nav-link" data-open-signin href="#">Sign In</a>
-      <a class="nav-link" href="cart.html">🛒 <span class="label">Cart</span> <span class="cart-count">0</span></a>
+      <a class="nav-link" href="search.html"><i class="fa-solid fa-magnifying-glass"></i> <span class="label">Search</span></a>
+      <a class="nav-link" href="help.html"><i class="fa-regular fa-circle-question"></i> <span class="label">Help</span></a>
+      <a class="nav-link" data-open-signin href="#"><i class="fa-regular fa-user"></i> <span class="label">Sign In</span></a>
+      <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="label">Cart</span> <span class="cart-count">0</span></a>
     </nav>
   </div>
 </header>
@@ -37,23 +38,37 @@
 <!-- Sign-in drawer -->
 <div class="overlay"></div>
 <div class="drawer">
-  <button class="drawer-close" aria-label="Close">✕</button>
-  <div class="logo" style="font-size:22px;">Swiggy<span style="color:var(--dark)">.</span></div>
-  <h2>India's #1 Food Delivery and Dining App</h2>
-  <p class="sub">Log in to enjoy faster checkout, order tracking and more.</p>
-  <form class="drawer-form">
-    <div class="phone-input-row">
-      <span>🇮🇳 +91</span>
-      <input type="tel" placeholder="Enter mobile number" required pattern="[0-9]{10}" maxlength="10">
-    </div>
-    <button type="submit" class="btn btn-primary btn-block">Continue</button>
-  </form>
-  <div class="divider">or</div>
-  <button class="btn btn-outline btn-block" type="button">Continue with Google</button>
-  <p class="fine-print">By continuing, you agree to our Terms of Service and Privacy Policy. This is a demo — no real account is created.</p>
+  <div class="drawer-hero">
+    <button class="drawer-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="logo">Swiggy<span style="color:#fff;opacity:0.85;">.</span></div>
+    <div class="drawer-icon"><i class="fa-solid fa-bowl-food"></i></div>
+  </div>
+  <div class="drawer-body">
+    <h2>India's #1 Food Delivery and Dining App</h2>
+    <p class="sub">Log in to enjoy faster checkout, order tracking and more.</p>
+    <form class="drawer-form">
+      <div class="phone-input-row">
+        <span>🇮🇳 +91</span>
+        <input type="tel" placeholder="Enter mobile number" required pattern="[0-9]{10}" maxlength="10">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Continue</button>
+    </form>
+    <div class="divider">or</div>
+    <button class="btn btn-outline btn-block" type="button"><i class="fa-brands fa-google"></i> Continue with Google</button>
+    <p class="fine-print">By continuing, you agree to our Terms of Service and Privacy Policy. This is a demo — no real account is created.</p>
+  </div>
 </div>
 
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a class="bottom-nav-item" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+    <a class="bottom-nav-item" href="search.html"><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+    <a class="bottom-nav-item active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart<span class="cart-count bn-badge" style="display:none;">0</span></a>
+    <a class="bottom-nav-item" href="help.html"><i class="fa-regular fa-circle-question"></i>Help</a>
+  </div>
+</nav>
+
 <script src="data.js"></script>
- <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
