@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help & Support | Swiggy Clone</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">Swiggy<span style="color:var(--dark)">.</span></a>
+    <div class="location-pill">
+      <span class="label">📍 Home <span style="color:var(--gray);">▾</span></span>
+      <span class="sub">Kazhakkoottam, Thiruvananthapuram, Kerala</span>
+    </div>
+    <div style="flex:1;"></div>
+    <button class="hamburger" aria-label="Menu">☰</button>
+    <nav class="header-nav">
+      <a class="nav-link" href="search.html">🔍 <span class="label">Search</span></a>
+      <a class="nav-link" data-open-signin href="#">Sign In</a>
+      <a class="nav-link" href="cart.html">🛒 <span class="label">Cart</span> <span class="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="container help-page">
+  <h1>Help & Support</h1>
+  <p class="sub">How can we help you today?</p>
+
+  <div class="help-topics">
+    <div class="help-topic"><div class="emoji">📦</div>Track my order</div>
+    <div class="help-topic"><div class="emoji">💳</div>Payments & refunds</div>
+    <div class="help-topic"><div class="emoji">🍽️</div>Order issue</div>
+    <div class="help-topic"><div class="emoji">🎟️</div>Offers & coupons</div>
+    <div class="help-topic"><div class="emoji">👤</div>Account settings</div>
+    <div class="help-topic"><div class="emoji">🏪</div>Partner with us</div>
+  </div>
+
+  <h2 style="font-size:18px;margin-bottom:8px;">Frequently asked questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">How do I track my order? <span class="chev">▾</span></button>
+      <div class="faq-answer">Once your order is placed, you can track it in real time from the Orders section of the app, including live rider location and estimated arrival time.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What if I received the wrong item? <span class="chev">▾</span></button>
+      <div class="faq-answer">Go to Help on your order and select "Wrong item delivered." You'll be offered a refund or replacement depending on restaurant availability.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do refunds work? <span class="chev">▾</span></button>
+      <div class="faq-answer">Approved refunds are credited to your original payment method or wallet within 5–7 business days.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I schedule an order for later? <span class="chev">▾</span></button>
+      <div class="faq-answer">Yes — on the checkout screen choose "Schedule for later" and pick a convenient delivery slot.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I apply a coupon code?<span class="chev">▾</span></button>
+      <div class="faq-answer">On the cart page, tap "Apply coupon," enter your code, and the discount will reflect in your bill total.</div>
+    </div>
+  </div>
+
+  <div class="help-contact">
+    <button class="btn btn-outline">💬 Chat with us</button>
+    <button class="btn btn-outline">📞 Call support</button>
+    <button class="btn btn-outline">✉️ Email us</button>
+  </div>
+</div>
+
+<footer class="site-footer">Built for UI ARENA — FOSS Club, LBSITW. Not affiliated with Swiggy. UI clone for educational purposes.</footer>
+
+<!-- Sign-in drawer -->
+<div class="overlay"></div>
+<div class="drawer">
+  <button class="drawer-close" aria-label="Close">✕</button>
+  <div class="logo" style="font-size:22px;">Swiggy<span style="color:var(--dark)">.</span></div>
+  <h2>India's #1 Food Delivery and Dining App</h2>
+  <p class="sub">Log in to enjoy faster checkout, order tracking and more.</p>
+  <form class="drawer-form">
+    <div class="phone-input-row">
+      <span>🇮🇳 +91</span>
+      <input type="tel" placeholder="Enter mobile number" required pattern="[0-9]{10}" maxlength="10">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Continue</button>
+  </form>
+  <div class="divider">or</div>
+  <button class="btn btn-outline btn-block" type="button">Continue with Google</button>
+  <p class="fine-print">By continuing, you agree to our Terms of Service and Privacy Policy. This is a demo — no real account is created.</p>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -3,24 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swiggy Clone — Food delivery from restaurants near you</title>
+<title>Search | Swiggy Clone</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">Swiggy<span style="color:var(--dark)">.</span></div>
+    <a class="logo" href="index.html">Swiggy<span style="color:var(--dark)">.</span></a>
     <div class="location-pill">
       <span class="label">📍 Home <span style="color:var(--gray);">▾</span></span>
       <span class="sub">Kazhakkoottam, Thiruvananthapuram, Kerala</span>
     </div>
-    <label class="header-search">
-      🔍 <input type="text" placeholder="Search for restaurants and food" onclick="location.href='search.html'" readonly>
-    </label>
+    <div style="flex:1;"></div>
     <button class="hamburger" aria-label="Menu">☰</button>
     <nav class="header-nav">
-      <a class="nav-link" href="search.html">🔍 <span class="label">Search</span></a>
       <a class="nav-link" href="help.html">❓ <span class="label">Help</span></a>
       <a class="nav-link" data-open-signin href="#">Sign In</a>
       <a class="nav-link" href="cart.html">🛒 <span class="label">Cart</span> <span class="cart-count">0</span></a>
@@ -28,29 +25,21 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Order food from your favourite restaurants</h1>
-    <p>Delivering to Kazhakkoottam, Thiruvananthapuram</p>
+<div class="container search-page">
+  <label class="search-bar-big">
+    🔍 <input type="text" class="search-input" placeholder="Search for restaurants or dishes" autofocus>
+  </label>
+  <div class="tag-list">
+    <span class="tag">Biryani</span>
+    <span class="tag">Pizza</span>
+    <span class="tag">Sushi</span>
+    <span class="tag">Dosa</span>
+    <span class="tag">Burger</span>
+    <span class="tag">Noodles</span>
+    <span class="tag">North Indian</span>
   </div>
-</section>
-
-<div class="container">
-  <div class="categories">
-    <a class="category-item" href="search.html"><div class="category-circle">🍛</div>North Indian</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍕</div>Pizza</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍣</div>Sushi</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍔</div>Burgers</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🥡</div>Chinese</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🥥</div>South Indian</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍰</div>Desserts</a>
-  </div>
-
-  <div class="section-heading">
-    <h2>Restaurants to explore</h2>
-    <span class="count">6 results</span>
-  </div>
-  <div class="restaurant-grid"><!-- injected by main.js --></div>
+  <div class="search-results"></div>
+  <p class="no-results">No results found. Try a different search.</p>
 </div>
 
 <footer class="site-footer">Built for UI ARENA — FOSS Club, LBSITW. Not affiliated with Swiggy. UI clone for educational purposes.</footer>
