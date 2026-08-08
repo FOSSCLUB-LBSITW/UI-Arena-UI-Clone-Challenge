@@ -150,7 +150,7 @@ const restaurants = [
                 name: "Cheese Garlic Bread",
                 price: 159,
                 description: "Soft garlic bread with melted cheese.",
-                image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=500"
+                image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cheese_Garlic_Bread.jpg"
             }
         ]
     },
@@ -196,7 +196,7 @@ const restaurants = [
                 name: "Garlic Bread",
                 price: 129,
                 description: "Freshly baked garlic bread.",
-                image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=500"
+                image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cheese_Garlic_Bread.jpg"
             }
         ]
     },
