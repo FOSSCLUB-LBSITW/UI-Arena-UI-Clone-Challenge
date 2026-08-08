@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <header class="topbar">
+        <div class="nav-inner">
+
+            <div class="brand">
+                <span class="brand-mark">S</span>
+                Swiggy
+            </div>
+
+            <div class="location">
+                📍 <span>Other</span>
+                <small>Kerala, India⌄</small>
+            </div>
+
+            <nav class="desktop-nav">
+                <button onclick="navigate('search')">🔎 Search</button>
+                <button onclick="navigate('help')">❓ Help</button>
+                <button onclick="openLogin()">👤 Sign In</button>
+                <button onclick="navigate('cart')">
+                    🛒 Cart <i id="cartBadge">0</i>
+                </button>
+            </nav>
+
+            <button class="mobile-cart" onclick="navigate('cart')">
+                🛒 <i id="mobileCartBadge">0</i>
+            </button>
+
+        </div>
+    </header>
+
+    <main id="app"></main>
+
+    <div id="drawerBackdrop" class="drawer-backdrop" onclick="closeLogin()"></div>
+
+    <aside id="loginDrawer" class="login-drawer">
+
+        <button class="close" onclick="closeLogin()">×</button>
+
+        <div class="login-emoji">👋</div>
+
+        <h2>Login</h2>
+
+        <p class="muted">
+            New to Swiggy? <b>Sign up</b>
+        </p>
+
+        <label for="phone">Phone number</label>
+
+        <input
+            id="phone"
+            type="tel"
+            maxlength="10"
+            placeholder="Enter phone number"
+        >
+
+        <button class="primary full" onclick="sendOtp()">
+            CONTINUE
+        </button>
+
+        <p class="terms">
+            By clicking on Login, I accept the
+            <b>Terms & Conditions</b> & <b>Privacy Policy</b>.
+        </p>
+
+    </aside>
+
+    <div id="toast"></div>
+
+    <nav class="mobile-bottom">
+        <button onclick="navigate('home')">
+            ⌂
+            <span>Home</span>
+        </button>
+
+        <button onclick="navigate('search')">
+            ⌕
+            <span>Search</span>
+        </button>
+
+        <button onclick="navigate('help')">
+            ❓
+            <span>Help</span>
+        </button>
+
+        <button onclick="openLogin()">
+            ◉
+            <span>Account</span>
+        </button>
+
+        <button onclick="navigate('cart')">
+            🛒
+            <span>Cart</span>
+        </button>
+    </nav>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
