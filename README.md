@@ -1,137 +1,80 @@
-# 🎯 UI ARENA — The UI Clone Challenge
+# Swiggy Clone — UI ARENA
 
-**Clone. Code. Conquer.**
+Starter scaffold: React + Vite + Tailwind, React Router, cart context.
 
-A 12-hour solo frontend challenge by **FOSS Club, LBSITW** — recreate a mystery website's homepage, revealed live the moment the event starts.
-
-**Repository:** https://github.com/FOSSCLUB-LBSITW/UI-Arena-UI-Clone-Challenge
-
----
-
-## 📌 Overview
-
-UI ARENA is a 12-hour frontend development challenge where participants recreate the UI of a popular website. The target website stays confidential until the event begins, making it a surprise challenge for everyone.
-
-- 🗓️ **Date:** 8 August 2026
-- ⏰ **Time:** 9:00 AM – 9:00 PM
-- 💻 **Mode:** Online
-- 👤 **Participation:** Individual only
-- 🆓 **Entry:** 100% free, no registration fee
-- 📜 **Certificates:** Provided to all participants
-
-## 🎯 Objectives
-
-- Improve participants' frontend development skills
-- Encourage problem-solving and attention to UI detail
-- Provide hands-on experience with Git and GitHub collaboration
-
-## ✅ Requirements
-
-- Home page matching the given UI
-- Responsive, clean interface
-- Proper folder structure and readable code
-
----
-
-## 🚀 How to Submit
-
-Submission happens entirely through a GitHub Pull Request. Follow these steps in order.
-
-### 1. Fork this repository
-
-Click **Fork** (top-right of this repo) to create your own copy under your GitHub account.
-
-### 2. Clone your fork
-
+## Run it locally
 ```bash
-git clone https://github.com/your-username/UI-Arena-UI-Clone-Challenge.git
-cd UI-Arena-UI-Clone-Challenge
+npm install
+npm run dev
+```
+Opens at http://localhost:5173
+
+## What's already built
+- **Home** — hero, cuisine filter chips, 6 restaurant cards (`src/pages/Home.jsx`)
+- **Restaurant** — banner, 5-6 item menu, add/remove with qty stepper (`src/pages/Restaurant.jsx`)
+- **Cart** — global cart via Context, bill summary (`src/pages/Cart.jsx`)
+- **Sign In** — right-side drawer, phone number input (`src/components/SignInDrawer.jsx`)
+- **Search** — dedicated page with live filter by name/cuisine/dish (`src/pages/Search.jsx`)
+- **Help** — accordion FAQ sections (`src/pages/Help.jsx`)
+
+Mock data lives in `src/data/restaurants.js` — this is what you should edit first
+to match real Swiggy content/imagery once the event's reference site is revealed.
+
+## What YOU still need to do
+1. Compare every page against the actual reference site/video shown at kickoff.
+2. Fix spacing, colors, fonts, and layout to match more closely (this is 35% of your score).
+3. Test responsiveness at mobile/tablet/desktop breakpoints — resize the browser or use dev tools device toolbar.
+4. Swap in real restaurant images/names if the brief wants a specific look.
+5. Add loading states / empty states if you have time.
+
+## Git / GitHub submission workflow
+
+### 1. Fork the official repo
+On GitHub, open the official repo link shared at kickoff → click **Fork** (top right) →
+this creates a copy under your own GitHub account.
+
+### 2. Clone YOUR fork (not the original repo)
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 ```
 
-### 3. Create a branch (recommended)
+### 3. Copy this project's files in
+Copy everything from this scaffold into your cloned repo folder (or start fresh there
+and paste these files in), keeping the same folder structure.
 
+### 4. Create a new branch (good practice, not always required)
 ```bash
-git checkout -b my-submission
+git checkout -b swiggy-ui
 ```
 
-### 4. Build the UI
-
-Recreate the homepage revealed at kick-off, using any frontend framework or plain HTML/CSS/JS — your choice.
-
-### 5. Commit your work
-
-Commit in small, frequent stages as you build — not one giant commit at the end.
-
+### 5. Stage, commit, push — do this regularly, not just once at the end
 ```bash
 git add .
-git commit -m "Add homepage layout and navbar"
+git commit -m "Add home page with restaurant listing"
+git push origin swiggy-ui
 ```
+Commit in small chunks as you build (e.g. one commit per page) — "clear, readable
+commit messages" is explicitly part of the rules.
 
-### 6. Push to your fork
+### 6. Open the Pull Request
+Go to your fork on GitHub → you'll see a banner "Compare & pull request" → click it →
+set the base repo to the **official** repo, base branch as instructed at kickoff →
+add a short description of what you built → **Create pull request**.
 
-```bash
-git push origin my-submission
-```
+### 7. Before the deadline
+Double-check:
+- Your fork is public / accessible to judges
+- The PR target is correct (official repo, not your own fork)
+- The PR was opened **before** 9:00 PM IST cutoff — late PRs are auto-disqualified
 
-### 7. Open a Pull Request
-
-- Go to your fork on GitHub — you'll usually see a **"Compare & pull request"** banner. Click it.
-- If not, go to **Pull Requests → New Pull Request**.
-- Confirm the base repository is `FOSSCLUB-LBSITW/ui-arena` and the compare branch is yours.
-- Give it a clear title (your name or username) and a short description of your approach.
-- Click **Create Pull Request**.
-
-Your Pull Request **is** your submission. Only PRs opened within the event window (9:00 AM – 9:00 PM, 8 Aug 2026) will be considered — don't leave this for the last minute.
-
-### Quick command reference
-
-| Step | Command |
+## Judging weight reminder
+| Criteria | Weight |
 |---|---|
-| Clone | `git clone <your-fork-url>` |
-| Check status | `git status` |
-| Create branch | `git checkout -b <branch-name>` |
-| Stage changes | `git add .` |
-| Commit | `git commit -m "message"` |
-| Push | `git push origin <branch-name>` |
-| Pull latest | `git pull` |
-
-New to Git? A Git guide attached to this repo [`UI_ARENA_Git_Guide.pdf`](./UI_ARENA_Git_Guide.pdf) covers it step by step with instructions.
-
----
-
-## 🏆 Judging Criteria
-
-| Criteria | Weightage |
-|---|---|
-| UI accuracy & resemblance | 40% |
-| Code quality & structure | 20% |
+| UI Accuracy & Resemblance | 35% |
 | Responsiveness | 20% |
-| Overall UX & design consistency | 20% |
+| Code Quality & Folder Structure | 20% |
+| Component Implementation | 15% |
+| Overall UX | 10% |
 
-## 🚫 Rules
-
-- Work must be completed **individually**.
-- The target site may only be referenced **after** the challenge is announced.
-- AI screenshot-to-code tools and previewing/prepping the target site before reveal are **not allowed**.
-- Plagiarism or copying another participant's work results in disqualification.
-- Only Pull Requests opened **within the event window** will be considered.
-- Organizers reserve the right to update rules if needed.
-
-## 📞 Event Coordinators
-
-| Name | Contact |
-|---|---|
-| Minnu Lekha V G | +91 91882 26165 |
-| Shreya Ajith | +91 82899 57074 |
-
-
-## 🔗 Links
-
-- **Email:** [fossclub@lbsitw.ac.in](mailto:fossclub@lbsitw.ac.in)
-- **LinkedIn:** [@FOSS Club Lbsitw](https://www.linkedin.com/company/foss-club-lbsitw)
-- **Instagram:** [@foss_club_lbsitw](https://instagram.com/foss_club_lbsitw)
-- **GitHub:** [FOSSCLUB-LBSITW](https://github.com/FOSSCLUB-LBSITW)
-  
----
-
-<p align="center">Organized with 💚 by <b>FOSS Club, LBSITW</b></p>
+Spend your remaining time in that order — accuracy and responsiveness first.
