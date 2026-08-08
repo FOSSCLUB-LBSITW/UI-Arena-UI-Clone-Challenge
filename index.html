@@ -3,209 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery</title>
+
+    <title>Swiggy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="logo">FoodApp</div>
+<!-- ================= HEADER ================= -->
 
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#search">Search</a>
-                <a href="#help">Help</a>
-                <button id="signin-btn">Sign In</button>
-                <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
-            </div>
-        </nav>
-    </header>
+<header class="header">
 
-    <main>
+    <div class="header-left">
 
-        <!-- Hero / Location section -->
-        <section class="hero">
-            <h1>Hungry?</h1>
-            <p>Find your favourite food and restaurants.</p>
+        <div class="swiggy-logo" onclick="showHome()">
+            <span class="logo-mark">S</span>
+            <span class="logo-text">swiggy</span>
+        </div>
 
-            <div class="search-box">
-                <input
-                    type="text"
-                    id="search-input"
-                    placeholder="Search for restaurants or dishes"
-                >
-                <button id="search-btn">Search</button>
-            </div>
-        </section>
+        <div class="location">
+            <span class="location-icon">📍</span>
 
-
-        <!-- Restaurant section -->
-        <section class="restaurants">
-            <h2>Restaurants</h2>
-
-            <div class="restaurant-grid">
-
-                <!-- Restaurant 1 -->
-                <article class="restaurant-card">
-                    <div class="restaurant-image">
-                        <!-- Add your image here -->
-                    </div>
-
-                    <div class="restaurant-info">
-                        <h3>Restaurant Name 1</h3>
-                        <p>Indian • North Indian</p>
-                        <p>★ 4.5 • 30-35 mins</p>
-                        <button class="view-restaurant">
-                            View Menu
-                        </button>
-                    </div>
-                </article>
-
-
-                <!-- Restaurant 2 -->
-                <article class="restaurant-card">
-                    <div class="restaurant-image">
-                        <!-- Add your image here -->
-                    </div>
-
-                    <div class="restaurant-info">
-                        <h3>Restaurant Name 2</h3>
-                        <p>Chinese • Asian</p>
-                        <p>★ 4.3 • 25-30 mins</p>
-                        <button class="view-restaurant">
-                            View Menu
-                        </button>
-                    </div>
-                </article>
-
-
-                <!-- Restaurant 3 -->
-                <article class="restaurant-card">
-                    <div class="restaurant-image">
-                        <!-- Add your image here -->
-                    </div>
-
-                    <div class="restaurant-info">
-                        <h3>Restaurant Name 3</h3>
-                        <p>Pizza • Italian</p>
-                        <p>★ 4.6 • 20-25 mins</p>
-                        <button class="view-restaurant">
-                            View Menu
-                        </button>
-                    </div>
-                </article>
-
-
-                <!-- Restaurant 4 -->
-                <article class="restaurant-card">
-                    <div class="restaurant-image">
-                        <!-- Add your image here -->
-                    </div>
-
-                    <div class="restaurant-info">
-                        <h3>Restaurant Name 4</h3>
-                        <p>Burgers • Fast Food</p>
-                        <p>★ 4.2 • 25-30 mins</p>
-                        <button class="view-restaurant">
-                            View Menu
-                        </button>
-                    </div>
-                </article>
-
-
-                <!-- Restaurant 5 -->
-                <article class="restaurant-card">
-                    <div class="restaurant-image">
-                        <!-- Add your image here -->
-                    </div>
-
-                    <div class="restaurant-info">
-                        <h3>Restaurant Name 5</h3>
-                        <p>South Indian • Breakfast</p>
-                        <p>★ 4.4 • 30-35 mins</p>
-                        <button class="view-restaurant">
-                            View Menu
-                        </button>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-
-        <!-- Search page/section -->
-        <section id="search">
-            <h2>Search</h2>
-
-            <div id="search-results">
-                <!-- Display search results here -->
-            </div>
-        </section>
-
-
-        <!-- Cart -->
-        <section id="cart">
-            <h2>Your Cart</h2>
-
-            <div id="cart-items">
-                <!-- JavaScript will add cart items here -->
+            <div>
+                <small>Location</small>
+                <strong>Thiruvananthapuram</strong>
             </div>
 
-            <div class="cart-summary">
-                <p>Total: ₹<span id="cart-total">0</span></p>
-                <button id="checkout-btn">Checkout</button>
-            </div>
-        </section>
+            <span>⌄</span>
+        </div>
+
+    </div>
 
 
-        <!-- Help -->
-        <section id="help">
-            <h2>Help</h2>
+    <nav class="nav">
 
-            <div class="help-options">
-                <button>Order related issues</button>
-                <button>Payment issues</button>
-                <button>Delivery issues</button>
-                <button>Contact support</button>
-            </div>
-        </section>
+        <button onclick="showSearch()" class="nav-item">
+            <span>⌕</span>
+            <span>Search</span>
+        </button>
 
-    </main>
+        <button onclick="showHelp()" class="nav-item">
+            <span>?</span>
+            <span>Help</span>
+        </button>
 
+        <button onclick="openSignin()" class="nav-item">
+            <span>♙</span>
+            <span>Sign In</span>
+        </button>
 
-    <!-- Sign-in drawer -->
-    <aside id="signin-drawer" class="signin-drawer">
+        <button onclick="showCart()" class="nav-item cart-button">
+            <span>🛒</span>
+            <span>Cart</span>
+            <b id="cartCount">0</b>
+        </button>
 
-        <button id="close-signin">×</button>
+    </nav>
 
-        <h2>Sign In</h2>
-
-        <form id="signin-form">
-            <label for="phone">Phone number</label>
-
-            <input
-                type="tel"
-                id="phone"
-                placeholder="Enter phone number"
-            >
-
-            <button type="submit">
-                Continue
-            </button>
-        </form>
-
-    </aside>
+</header>
 
 
-    <footer>
-        <p>© 2026 FoodApp</p>
-    </footer>
+<!-- ================= MAIN APP ================= -->
+
+<main id="app"></main>
 
 
-    <script src="js/app.js"></script>
+<!-- ================= SIGN IN DRAWER ================= -->
+
+<div id="overlay" class="overlay" onclick="closeSignin()"></div>
+
+<aside id="signinDrawer" class="signin-drawer">
+
+    <button class="close-btn" onclick="closeSignin()">×</button>
+
+    <div class="signin-content">
+
+        <h2>Sign in</h2>
+
+        <p class="new-user">
+            or <span>create an account</span>
+        </p>
+
+        <input
+            type="text"
+            id="phoneInput"
+            placeholder="Phone number"
+            maxlength="10"
+        >
+
+        <button class="continue-btn" onclick="signin()">
+            CONTINUE
+        </button>
+
+        <p class="terms">
+            By clicking on Continue, I agree to Swiggy's
+            <b>Terms & Conditions</b> and <b>Privacy Policy</b>
+        </p>
+
+    </div>
+
+</aside>
+
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
