@@ -1,25 +1,17 @@
 /* =====================================
    RESTAURANT DATA
 ===================================== */
-
-/* =====================================
-   KERALA RESTAURANT DATA
-===================================== */
-
 const restaurants = [
 
     {
         id: 1,
-
         name: "Tharavadu Kitchen",
 
         image:
-            "https://images.unsplash.com/photo-1601050690597-df0568f70950",
+            "images/tharavadu_kitchen.jpg",
 
         rating: "4.6",
-
         time: "30 mins",
-
         food: "Kerala Meals, South Indian",
 
         menu: [
@@ -34,17 +26,14 @@ const restaurants = [
 
     {
         id: 2,
-
         name: "Malabar Treat",
 
         image:
-            "https://images.unsplash.com/photo-1563379091339-03246963d51a",
+            "images/malabar_treat.jpg",
 
         rating: "4.5",
-
         time: "35 mins",
-
-        food: "Malabar, Biryani",
+        food: "Malabar, Kerala",
 
         menu: [
             ["Malabar Chicken Biryani", 250],
@@ -58,16 +47,13 @@ const restaurants = [
 
     {
         id: 3,
-
         name: "Coconut Tree Restaurant",
 
         image:
-            "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+            "images/coconut_tree_restaurant.jpg",
 
         rating: "4.4",
-
         time: "30 mins",
-
         food: "Kerala, Vegetarian",
 
         menu: [
@@ -82,16 +68,13 @@ const restaurants = [
 
     {
         id: 4,
-
         name: "Naadan Thattukada",
 
         image:
-            "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7",
+            "images/naadan_thattukada.jpg",
 
         rating: "4.7",
-
         time: "25 mins",
-
         food: "Naadan Food, Thattukada",
 
         menu: [
@@ -106,17 +89,14 @@ const restaurants = [
 
     {
         id: 5,
-
         name: "Backwater Cafe",
 
         image:
-            "https://images.unsplash.com/photo-1547592180-85f173990554",
+            "images/backwater_cafe.jpg",
 
         rating: "4.5",
-
         time: "30 mins",
-
-        food: "Kerala, Seafood",
+        food: "Kerala, Cafe",
 
         menu: [
             ["Karimeen Fry", 350],
@@ -128,8 +108,6 @@ const restaurants = [
     }
 
 ];
-
-
 /* =====================================
    CART
 ===================================== */
@@ -179,37 +157,37 @@ function showHome() {
 
             <div class="categories">
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Meals', '🍛')">
         🍛
         <span>Meals</span>
     </div>
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Dosa', '🥞')">
         🥞
         <span>Dosa</span>
     </div>
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Appam', '🥘')">
         🥘
         <span>Appam</span>
     </div>
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Chicken', '🍗')">
         🍗
         <span>Chicken</span>
     </div>
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Fish', '🐟')">
         🐟
         <span>Fish</span>
     </div>
 
-    <div class="category">
+    <div class="category" onclick="showCategory('Desserts', '🍰')">
         🍰
         <span>Desserts</span>
     </div>
 
-</div>ss
+</div>
 
 
             <h2>
@@ -227,6 +205,120 @@ function showHome() {
 
     `;
 
+}
+
+
+/* =====================================
+   CATEGORY DETAIL PAGE
+===================================== */
+
+const categoryKeywords = {
+    "Meals": ["meals", "sadya", "avial", "stew", "thali", "curry"],
+    "Dosa": ["dosa", "sambar", "idli", "uttapam"],
+    "Appam": ["appam", "puttu", "porotta", "parotta", "roast", "pathiri"],
+    "Chicken": ["chicken"],
+    "Fish": ["fish", "karimeen", "prawns"],
+    "Desserts": ["payasam", "pazham pori", "unniyappam", "dessert", "sweet"]
+};
+
+function getDishesByCategory(categoryName) {
+    const keywords = categoryKeywords[categoryName] || [categoryName.toLowerCase()];
+    const results = [];
+    restaurants.forEach(restaurant => {
+        restaurant.menu.forEach(item => {
+            const dishName = item[0];
+            const price = item[1];
+            const matches = keywords.some(kw => dishName.toLowerCase().includes(kw) || restaurant.food.toLowerCase().includes(kw));
+            if (matches) {
+                results.push({
+                    dishName: dishName,
+                    price: price,
+                    restaurantId: restaurant.id,
+                    restaurantName: restaurant.name,
+                    rating: restaurant.rating,
+                    time: restaurant.time,
+                    image: restaurant.image
+                });
+            }
+        });
+    });
+    return results;
+}
+
+function showCategory(categoryName, emoji) {
+    const dishes = getDishesByCategory(categoryName);
+    const keywords = categoryKeywords[categoryName] || [categoryName.toLowerCase()];
+    const matchingRestaurants = restaurants.filter(r => {
+        return r.menu.some(item => keywords.some(kw => item[0].toLowerCase().includes(kw))) ||
+               keywords.some(kw => r.food.toLowerCase().includes(kw));
+    });
+
+    const categoryList = [
+        { name: "Meals", emoji: "🍛" },
+        { name: "Dosa", emoji: "🥞" },
+        { name: "Appam", emoji: "🥘" },
+        { name: "Chicken", emoji: "🍗" },
+        { name: "Fish", emoji: "🐟" },
+        { name: "Desserts", emoji: "🍰" }
+    ];
+
+    main.innerHTML = `
+        <div class="container category-page">
+            <button class="back-btn" onclick="showHome()">
+                ← Back to Home
+            </button>
+
+            <div class="category-header-banner">
+                <span class="category-banner-emoji">${emoji}</span>
+                <div>
+                    <h1>${categoryName}</h1>
+                    <p>${dishes.length} delicious ${categoryName.toLowerCase()} options available across restaurants</p>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="categories category-filter-tabs">
+                ${categoryList.map(cat => `
+                    <div class="category ${cat.name === categoryName ? 'active-cat' : ''}" onclick="showCategory('${cat.name}', '${cat.emoji}')">
+                        ${cat.emoji}
+                        <span>${cat.name}</span>
+                    </div>
+                `).join("")}
+            </div>
+
+            <h2>Available ${categoryName} Items (${dishes.length})</h2>
+
+            <div class="dish-grid">
+                ${dishes.length > 0 ? dishes.map(dish => `
+                    <div class="dish-card">
+                        <div class="dish-header">
+                            <span class="dish-restaurant-badge" onclick="showRestaurant(${dish.restaurantId})">
+                                🏪 ${dish.restaurantName}
+                            </span>
+                            <span class="dish-rating">⭐ ${dish.rating} • ${dish.time}</span>
+                        </div>
+                        <div class="dish-body">
+                            <div>
+                                <h3 class="dish-title">${dish.dishName}</h3>
+                                <p class="dish-price">₹${dish.price}</p>
+                            </div>
+                            <button class="add-btn" onclick="addToCart('${dish.dishName.replace(/'/g, "\\'")}', ${dish.price})">
+                                ADD
+                            </button>
+                        </div>
+                    </div>
+                `).join("") : `
+                    <p>No dishes found in this category.</p>
+                `}
+            </div>
+
+            <h2 style="margin-top: 36px; margin-bottom: 20px;">Restaurants serving ${categoryName}</h2>
+            <div class="restaurant-grid">
+                ${restaurantCards(matchingRestaurants)}
+            </div>
+        </div>
+    `;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
@@ -408,21 +500,16 @@ function addToCart(name, price) {
 ===================================== */
 
 function updateCartCount() {
-
     let count = 0;
-
-
     cart.forEach(item => {
-
         count += item.quantity;
-
     });
 
+    const desktopCount = document.getElementById("cartCount");
+    if (desktopCount) desktopCount.innerText = count;
 
-    document.getElementById(
-        "cartCount"
-    ).innerText = count;
-
+    const mobileCount = document.getElementById("cartCountMobile");
+    if (mobileCount) mobileCount.innerText = count;
 }
 
 
