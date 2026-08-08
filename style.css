@@ -1,0 +1,226 @@
+/* Swiggy Brand Colors & Layout Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Basis Grotesque Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #02060c;
+}
+
+/* Header */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fc8019;
+  letter-spacing: -0.5px;
+}
+
+.location-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.location-label {
+  font-weight: 700;
+  border-bottom: 2px solid #02060c;
+  padding-bottom: 2px;
+}
+
+.location-address {
+  color: #686b78;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  color: #fc8019;
+  font-size: 10px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #3d4152;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #fc8019;
+}
+
+.badge {
+  color: #ffa700;
+  font-size: 10px;
+  vertical-align: super;
+}
+
+/* Main Layout */
+.main-content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #02060c;
+}
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.category-card {
+  cursor: pointer;
+}
+
+.img-placeholder {
+  width: 90px;
+  height: 90px;
+  background-color: #f2f2f3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 8px;
+}
+
+.category-card p {
+  font-weight: 600;
+  color: #414449;
+  font-size: 15px;
+}
+
+/* Restaurant Grid */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.restaurant-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.restaurant-card:hover {
+  transform: scale(0.95);
+}
+
+.card-image {
+  height: 170px;
+  background-color: #e2e8f0;
+  position: relative;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.discount-tag {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+  width: 100%;
+  padding: 8px 4px 0;
+}
+
+.card-details {
+  padding: 12px 4px;
+}
+
+.card-details h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #02060c;
+  margin-bottom: 4px;
+}
+
+.rating-time {
+  font-weight: 600;
+  font-size: 15px;
+  color: #02060c;
+  margin-bottom: 4px;
+}
+
+.rating {
+  background-color: #11823b;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.cuisine, .location {
+  color: #686b78;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer */
+.footer {
+  background-color: #f0f0f5;
+  padding: 40px 0;
+  text-align: center;
+  color: #02060c;
+  font-weight: 700;
+}
