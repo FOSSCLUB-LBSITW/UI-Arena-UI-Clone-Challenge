@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Help - Foodie</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <a href="../index.html" class="logo">
+        <span>food</span>ie
+    </a>
+
+    <div class="location">
+
+        <span class="location-icon">📍</span>
+
+        <div>
+            <small>Delivering to</small>
+            <strong>Kerala, India ▾</strong>
+        </div>
+
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="../index.html">
+            🏠 Home
+        </a>
+
+        <a href="search.html">
+            🔍 Search
+        </a>
+
+        <a href="help.html">
+            ❓ Help
+        </a>
+
+        <a href="cart.html" class="cart-link">
+            🛒 Cart
+            <span id="cartCount" class="cart-count">0</span>
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HELP HERO ================= -->
+
+<main class="help-page">
+
+    <section class="help-hero">
+
+        <p class="section-label">
+            SUPPORT
+        </p>
+
+        <h1>
+            How can we help you?
+        </h1>
+
+        <p>
+            Find answers to common questions or get in touch
+            with our support team.
+        </p>
+
+        <div class="help-search">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="helpSearch"
+                placeholder="Search for help..."
+                oninput="filterFAQs()"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK HELP ================= -->
+
+    <section class="quick-help">
+
+        <h2>
+            What do you need help with?
+        </h2>
+
+        <div class="help-cards">
+
+            <div class="help-card">
+
+                <div class="help-card-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    My Orders
+                </h3>
+
+                <p>
+                    Track your order and check your
+                    delivery status.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <div class="help-card-icon">
+                    💳
+                </div>
+
+                <h3>
+                    Payments
+                </h3>
+
+                <p>
+                    Get help with payments, refunds
+                    and billing.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <div class="help-card-icon">
+                    🏪
+                </div>
+
+                <h3>
+                    Restaurant
+                </h3>
+
+                <p>
+                    Questions about restaurants,
+                    menus or food quality.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <div class="help-card-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Account
+                </h3>
+
+                <p>
+                    Manage your account and
+                    sign-in related issues.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="faq-section">
+
+        <div class="faq-heading">
+
+            <p class="section-label">
+                FAQ
+            </p>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+
+        <div id="faqList">
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    How do I place an order?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Choose a restaurant from the home page,
+                        select the items you want, add them to
+                        your cart and proceed to checkout.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    How can I track my order?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        After placing an order, you can check
+                        the order status from the orders section.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    Can I cancel my order?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Orders can be cancelled shortly after
+                        placing them. Cancellation availability
+                        may depend on the restaurant's status.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    How do refunds work?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Eligible refunds are processed back to
+                        the original payment method.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    What if my food is missing or incorrect?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Contact support with your order details
+                        and our team will help resolve the issue.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button onclick="toggleFAQ(this)">
+                    How do I change my delivery address?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Select your delivery location before
+                        placing your order to ensure your food
+                        reaches the correct address.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-support">
+
+        <div>
+
+            <p class="section-label">
+                STILL NEED HELP?
+            </p>
+
+            <h2>
+                We're here for you.
+            </h2>
+
+            <p>
+                Our support team is ready to help you with
+                your food delivery experience.
+            </p>
+
+        </div>
+
+        <button onclick="contactSupport()">
+            Contact Support
+        </button>
+
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        <span>food</span>ie
+    </div>
+
+    <p>
+        © 2026 Foodie. Built for UI Arena Challenge.
+    </p>
+
+    <div>
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="help.html">
+            Help
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/app.js"></script>
+
+</body>
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<div class="page-navigation">
+
+    <button
+        onclick="goBack()"
+        class="back-button"
+    >
+        ← Back
+    </button>
+
+    <a
+        href="../index.html"
+        class="home-button"
+    >
+        🏠 Home
+    </a>
+
+</div>
+</html>
+
