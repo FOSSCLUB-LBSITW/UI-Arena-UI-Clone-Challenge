@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Food Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo"
+             onclick="showHome()">
+
+            FOODIE
+
+        </div>
+
+        <nav>
+
+            <a href="#"
+               onclick="showHome()">
+                Home
+            </a>
+
+            <a href="#"
+               onclick="showSearch()">
+                🔍 Search
+            </a>
+
+            <a href="#"
+               onclick="showHelp()">
+                ❓ Help
+            </a>
+
+            <a href="#"
+               onclick="showCart()">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main id="mainContent"></main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
