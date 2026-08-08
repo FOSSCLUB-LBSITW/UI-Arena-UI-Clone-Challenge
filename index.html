@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Swiggy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="header-left">
+
+        <div class="swiggy-logo" onclick="showHome()">
+            <span class="logo-mark">S</span>
+            <span class="logo-text">swiggy</span>
+        </div>
+
+        <div class="location">
+            <span class="location-icon">📍</span>
+
+            <div>
+                <small>Location</small>
+                <strong>Thiruvananthapuram</strong>
+            </div>
+
+            <span>⌄</span>
+        </div>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <button onclick="showSearch()" class="nav-item">
+            <span>⌕</span>
+            <span>Search</span>
+        </button>
+
+        <button onclick="showHelp()" class="nav-item">
+            <span>?</span>
+            <span>Help</span>
+        </button>
+
+        <button onclick="openSignin()" class="nav-item">
+            <span>♙</span>
+            <span>Sign In</span>
+        </button>
+
+        <button onclick="showCart()" class="nav-item cart-button">
+            <span>🛒</span>
+            <span>Cart</span>
+            <b id="cartCount">0</b>
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN APP ================= -->
+
+<main id="app"></main>
+
+
+<!-- ================= SIGN IN DRAWER ================= -->
+
+<div id="overlay" class="overlay" onclick="closeSignin()"></div>
+
+<aside id="signinDrawer" class="signin-drawer">
+
+    <button class="close-btn" onclick="closeSignin()">×</button>
+
+    <div class="signin-content">
+
+        <h2>Sign in</h2>
+
+        <p class="new-user">
+            or <span>create an account</span>
+        </p>
+
+        <input
+            type="text"
+            id="phoneInput"
+            placeholder="Phone number"
+            maxlength="10"
+        >
+
+        <button class="continue-btn" onclick="signin()">
+            CONTINUE
+        </button>
+
+        <p class="terms">
+            By clicking on Continue, I agree to Swiggy's
+            <b>Terms & Conditions</b> and <b>Privacy Policy</b>
+        </p>
+
+    </div>
+
+</aside>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
