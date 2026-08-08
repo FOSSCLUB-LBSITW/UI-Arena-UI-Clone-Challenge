@@ -95,3 +95,53 @@ body { font-family: Arial, sans-serif; }
 .drawer-overlay.open {
   display: block;
 }
+
+.restaurant-header {
+  padding: 30px 40px 10px;
+}
+
+.restaurant-header h1 {
+  font-size: 28px;
+}
+
+.restaurant-header .rating {
+  color: #666;
+  margin-top: 8px;
+}
+
+.menu-list {
+  padding: 20px 40px;
+  max-width: 700px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.item-info p {
+  color: #666;
+}
+
+.add-btn {
+  background: white;
+  border: 1px solid #60b246;
+  color: #60b246;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #60b246;
+  color: white;
+}
