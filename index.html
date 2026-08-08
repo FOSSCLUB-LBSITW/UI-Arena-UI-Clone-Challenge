@@ -1,1 +1,27 @@
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy — Food delivery and takeaway</title>
+    <script>
+      // Single Page Apps for GitHub Pages: restore the real path that
+      // 404.html encoded into the query string before React Router mounts.
+      (function (l) {
+        if (l.search[1] === 'p' && l.search[2] === '=') {
+          var decoded = l.search.slice(1).split('&').map(function (s) { return s.replace(/~and~/g, '&'); });
+          window.history.replaceState(
+            null,
+            '',
+            l.pathname.slice(0, -1) + decoded[0].slice(2) + (decoded[1] ? '?' + decoded[1].slice(2) : '') + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
