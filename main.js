@@ -116,13 +116,13 @@ function renderRestaurantGrid() {
   if (!grid) return;
   grid.innerHTML = RESTAURANTS.map((r) => `
     <a class="restaurant-card" href="restaurant.html?id=${r.id}">
-      <div class="card-image" style="background:${r.color}22;">
-        <span>${r.emoji}</span>
+      <div class="card-image" style="background:linear-gradient(135deg, ${r.color}33, ${r.color}14);">
+        <div class="card-image-icon">${r.emoji}</div>
         <div class="card-offer">${r.offer}</div>
       </div>
       <div class="card-name">${r.name}</div>
       <div class="card-meta">
-        <span class="rating">★ ${r.rating}</span>
+        <span class="rating"><i class="fa-solid fa-star"></i> ${r.rating}</span>
         <span>•</span>
         <span>${r.time}</span>
       </div>
@@ -140,27 +140,27 @@ function renderRestaurantPage() {
   const id = Number(params.get("id")) || RESTAURANTS[0].id;
   const r = getRestaurantById(id) || RESTAURANTS[0];
 
-  document.querySelector(".restaurant-banner").style.background = `${r.color}22`;
-  document.querySelector(".restaurant-banner span").textContent = r.emoji;
+  document.querySelector(".restaurant-banner").style.background = `linear-gradient(135deg, ${r.color}55, ${r.color}22)`;
+  document.querySelector(".restaurant-banner .banner-icon").textContent = r.emoji;
   document.querySelector(".restaurant-header h1").textContent = r.name;
   document.querySelector(".restaurant-header .cuisines").textContent = r.cuisines;
-  document.querySelector(".meta-rating").textContent = `★ ${r.rating}`;
-  document.querySelector(".meta-time").textContent = r.time;
-  document.querySelector(".meta-cost").textContent = r.cost;
+  document.querySelector(".meta-rating").innerHTML = `<i class="fa-solid fa-star"></i> ${r.rating}`;
+  document.querySelector(".meta-time").innerHTML = `<i class="fa-regular fa-clock"></i> ${r.time}`;
+  document.querySelector(".meta-cost").innerHTML = `<i class="fa-solid fa-indian-rupee-sign"></i> ${r.cost}`;
   document.title = `${r.name} — Menu | Swiggy Clone`;
 
   const list = document.querySelector(".menu-list");
-  list.innerHTML = r.menu.map((item) => `
+  list.innerHTML = `<h3>Recommended (${r.menu.length})</h3>` + r.menu.map((item) => `
     <div class="menu-item" data-item-id="${item.id}">
       <div class="menu-item-info">
         <span class="veg-dot ${item.veg ? "" : "nonveg"}"></span>
         <div class="menu-item-name">${item.name}</div>
         <div class="menu-item-price">₹${item.price}</div>
-        <div class="rating" style="font-size:12px;">★ ${item.rating}</div>
+        <div class="rating" style="font-size:12px;"><i class="fa-solid fa-star"></i> ${item.rating}</div>
         <div class="menu-item-desc">${item.desc}</div>
       </div>
       <div class="menu-item-image">
-        <div class="img-box" style="background:${r.color}22;">${r.emoji}</div>
+        <div class="img-box" style="background:linear-gradient(135deg, ${r.color}44, ${r.color}18);">${r.emoji}</div>
         <div class="add-zone" data-add-zone="${item.id}"></div>
       </div>
     </div>
@@ -189,7 +189,7 @@ function renderMenuQuantities() {
     const itemId = Number(zone.dataset.addZone);
     const qty = cart.items?.[itemId]?.qty || 0;
     zone.innerHTML = qty > 0
-      ? `<div class="qty-control"><button data-action="dec" aria-label="Decrease quantity">−</button><span>${qty}</span><button data-action="inc" aria-label="Increase quantity">+</button></div>`
+      ? `<div class="qty-control"><button data-action="dec" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button><span>${qty}</span><button data-action="inc" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button></div>`
       : `<button class="add-btn" data-action="add">ADD</button>`;
   });
 }
@@ -205,10 +205,10 @@ function renderCartPage() {
   if (!items.length) {
     body.innerHTML = `
       <div class="empty-state">
-        <div class="emoji">🛒</div>
+        <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
         <h2>Your cart is empty</h2>
         <p>Add items from a restaurant to get started</p>
-        <a href="index.html" class="btn btn-primary" style="margin-top:16px;display:inline-flex;">Browse restaurants</a>
+        <a href="index.html" class="btn btn-primary" style="margin-top:18px;display:inline-flex;">Browse restaurants</a>
       </div>`;
     return;
   }
@@ -230,10 +230,10 @@ function renderCartPage() {
             <span class="cart-item-name">${i.name}</span>
             <div class="cart-item-price">₹${i.price} × ${i.qty} = ₹${i.price * i.qty}</div>
           </div>
-          <div class="qty-control" style="width:90px;">
-            <button data-remove="${i.id}" aria-label="Decrease quantity">−</button>
+          <div class="qty-control" style="width:96px;">
+            <button data-remove="${i.id}" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
             <span>${i.qty}</span>
-            <button data-add="${i.id}" aria-label="Increase quantity">+</button>
+            <button data-add="${i.id}" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
           </div>
         </div>
       `).join("")}
@@ -293,7 +293,7 @@ function initSearchPage() {
     resultsEl.innerHTML = [
       ...restaurantMatches.map((r) => `
         <a class="result-row" href="restaurant.html?id=${r.id}">
-          <div class="result-emoji" style="background:${r.color}22;">${r.emoji}</div>
+          <div class="result-emoji" style="background:linear-gradient(135deg, ${r.color}33, ${r.color}14);">${r.emoji}</div>
           <div class="result-info">
             <div class="name">${r.name}</div>
             <div class="meta">${r.cuisines} · ★ ${r.rating}</div>
@@ -301,7 +301,7 @@ function initSearchPage() {
         </a>`),
       ...dishMatches.map(({ item, restaurant: r }) => `
         <a class="result-row" href="restaurant.html?id=${r.id}">
-          <div class="result-emoji" style="background:${r.color}22;">${r.emoji}</div>
+          <div class="result-emoji" style="background:linear-gradient(135deg, ${r.color}33, ${r.color}14);">${r.emoji}</div>
           <div class="result-info">
             <div class="name">${item.name}</div>
             <div class="meta">₹${item.price} · from ${r.name}</div>
@@ -327,10 +327,18 @@ function initFaq() {
   });
 }
 
+/* ---------- Filter chip toggles (visual only, search page) ---------- */
+function initFilterChips() {
+  document.querySelectorAll(".filter-chip").forEach((chip) => {
+    chip.addEventListener("click", () => chip.classList.toggle("active"));
+  });
+}
+
 /* ---------- Init on every page ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   initDrawer();
   initHamburger();
+  initFilterChips();
   updateCartCount();
   renderRestaurantGrid();
   renderRestaurantPage();
