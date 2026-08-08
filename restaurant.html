@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swiggy Clone — Food delivery from restaurants near you</title>
+<title>Restaurant Menu | Swiggy Clone</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -11,7 +11,7 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">Swiggy<span style="color:var(--dark)">.</span></div>
+    <a class="logo" href="index.html">Swiggy<span style="color:var(--dark)">.</span></a>
     <div class="location-pill">
       <span class="label"><i class="fa-solid fa-location-dot"></i> Home <span class="chev">▾</span></span>
       <span class="sub">Kazhakkoottam, Thiruvananthapuram, Kerala</span>
@@ -29,30 +29,24 @@
   </div>
 </header>
 
-<section class="hero">
+<div class="restaurant-detail">
+  <div class="restaurant-banner"><div class="banner-icon"></div></div>
+  <div class="container restaurant-header">
+    <h1></h1>
+    <div class="cuisines"></div>
+    <div class="meta-row">
+      <span class="meta-badge rating-badge meta-rating"></span>
+      <span class="meta-badge meta-time"></span>
+      <span class="meta-badge meta-cost"></span>
+    </div>
+  </div>
   <div class="container">
-    <h1>Order food from your favourite restaurants</h1>
-    <p>Delivering to Kazhakkoottam, Thiruvananthapuram</p>
+    <div class="promo-banner"><i class="fa-solid fa-circle-check"></i> Free delivery on orders above ₹149 with SwiggyONE</div>
   </div>
-</section>
-
-<div class="container">
-  <div class="categories">
-    <a class="category-item" href="search.html"><div class="category-circle">🍛</div>North Indian</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍕</div>Pizza</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍣</div>Sushi</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍔</div>Burgers</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🥡</div>Chinese</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🥥</div>South Indian</a>
-    <a class="category-item" href="search.html"><div class="category-circle">🍰</div>Desserts</a>
-  </div>
-
-  <div class="section-heading">
-    <h2>Restaurants to explore</h2>
-    <span class="count">6 results</span>
-  </div>
-  <div class="restaurant-grid"><!-- injected by main.js --></div>
+  <div class="container menu-list"><!-- injected by main.js --></div>
 </div>
+
+<div class="cart-float-bar"></div>
 
 <footer class="site-footer">Built for UI ARENA — FOSS Club, LBSITW. Not affiliated with Swiggy. UI clone for educational purposes.</footer>
 
