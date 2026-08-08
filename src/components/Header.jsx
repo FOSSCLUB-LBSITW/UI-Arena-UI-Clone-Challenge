@@ -12,7 +12,7 @@ export default function Header({ onOpenSignIn, showTopSearch = true }) {
     src="https://w7.pngwing.com/pngs/55/100/png-transparent-swiggy-hd-logo-thumbnail.png"
     alt="Swiggy"
     width="28"
-    height="40"
+    height="41"
     style={{ borderRadius: "8px", objectFit: "cover", flexShrink: 0 }}
     onError={onImgError}
   />
