@@ -7,76 +7,131 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Swiggy</div>
-    <div class="location">📍 Select Location</div>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">S</div></a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
     <div class="nav-links">
       <a href="search.html">Search</a>
       <a href="help.html">Help</a>
-      <a href="cart.html">Cart</a>
-      <button id="signin-btn">Sign In</button>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
     </div>
   </header>
 
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+ <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+
   <section class="hero">
-    <h1>Order food & groceries</h1>
-    <input type="text" placeholder="Search for restaurants and food">
+    <h1>What's on your mind?</h1>
   </section>
+
+  <section class="cuisine-strip-wrap">
+  <div class="cuisine-strip-header">
+    <div class="cuisine-strip-arrows">
+      <button id="scroll-left">←</button>
+      <button id="scroll-right">→</button>
+    </div>
+  </div>
+  <div class="cuisine-strip" id="cuisine-strip">
+    <div class="cuisine-strip-item">
+      <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=200&q=80" alt="Biryani">
+      <span>Biryani</span>
+    </div>
+    <div class="cuisine-strip-item">
+      <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=200&q=80" alt="Pizza">
+      <span>Pizza</span>
+    </div>
+    <div class="cuisine-strip-item">
+      <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=200&q=80" alt="Dosa">
+      <span>Dosa</span>
+    </div>
+    <div class="cuisine-strip-item">
+      <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&q=80" alt="Desserts">
+      <span>Desserts</span>
+    </div>
+    <div class="cuisine-strip-item">
+      <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=200&q=80" alt="North Indian">
+      <span>North Indian</span>
+    </div>
+  </div>
+</section>
 
   <section class="restaurant-grid">
 
-  <a href="restaurant.html" class="restaurant-card">
-    <img src="assets/images/restaurant1.jpg" alt="Punjabi Tadka">
-    <div class="card-info">
-      <h3>Punjabi Tadka</h3>
-      <p class="rating">⭐ 4.3 · 30 mins</p>
-      <p class="cuisine">North Indian, Punjabi</p>
-    </div>
-  </a>
+    <a href="restaurant.html" class="restaurant-card">
+      <div class="card-img-wrap">
+        <img src="assets/images/restaurant1.jpg" alt="Punjabi Tadka">
+        <span class="offer-badge">₹40 OFF ABOVE ₹499</span>
+      </div>
+      <div class="card-info">
+        <h3>Punjabi Tadka</h3>
+        <p class="rating"><span class="rating-badge">★</span>4.3 · 30-35 mins</p>
+        <p class="cuisine">North Indian, Chinese</p>
+      </div>
+    </a>
 
-  <a href="restaurant.html" class="restaurant-card">
-    <img src="assets/images/restaurant2.jpg" alt="Sagar Ratna">
-    <div class="card-info">
-      <h3>Sagar Ratna</h3>
-      <p class="rating">⭐ 4.1 · 25 mins</p>
-      <p class="cuisine">South Indian, Dosa</p>
-    </div>
-  </a>
+    <a href="restaurant2.html" class="restaurant-card">
+      <div class="card-img-wrap">
+        <img src="assets/images/restaurant2.jpg" alt="Sagar Ratna">
+        <span class="offer-badge">₹75 OFF ABOVE ₹199</span>
+      </div>
+      <div class="card-info">
+        <h3>Sagar Ratna</h3>
+        <p class="rating"><span class="rating-badge">★</span>4.1 · 25-30 mins</p>
+        <p class="cuisine">South Indian, Dosa</p>
+      </div>
+    </a>
 
-  <a href="restaurant.html" class="restaurant-card">
-    <img src="assets/images/restaurant3.jpg" alt="Pizza Junction">
-    <div class="card-info">
-      <h3>Pizza Junction</h3>
-      <p class="rating">⭐ 4.5 · 35 mins</p>
-      <p class="cuisine">Italian, Pizza, Fast Food</p>
-    </div>
-  </a>
+    <a href="restaurant3.html" class="restaurant-card">
+      <div class="card-img-wrap">
+        <img src="assets/images/restaurant3.jpg" alt="Pizza Junction">
+        <span class="offer-badge">ITEMS AT ₹129</span>
+      </div>
+      <div class="card-info">
+        <h3>Pizza Junction</h3>
+        <p class="rating"><span class="rating-badge">★</span>4.5 · 35-40 mins</p>
+        <p class="cuisine">Italian, Pizza, Fast Food</p>
+      </div>
+    </a>
 
-  <a href="restaurant.html" class="restaurant-card">
-    <img src="assets/images/restaurant4.jpg" alt="Biryani House">
-    <div class="card-info">
-      <h3>Biryani House</h3>
-      <p class="rating">⭐ 4.2 · 40 mins</p>
-      <p class="cuisine">Biryani, Mughlai</p>
-    </div>
-  </a>
+    <a href="restaurant4.html" class="restaurant-card">
+      <div class="card-img-wrap">
+        <img src="assets/images/restaurant4.jpg" alt="Biryani House">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-info">
+        <h3>Biryani House</h3>
+        <p class="rating"><span class="rating-badge">★</span>4.2 · 40-45 mins</p>
+        <p class="cuisine">Biryani, Mughlai</p>
+      </div>
+    </a>
 
-  <a href="restaurant.html" class="restaurant-card">
-    <img src="assets/images/restaurant5.jpg" alt="Sweet Corner">
-    <div class="card-info">
-      <h3>Sweet Corner</h3>
-      <p class="rating">⭐ 4.6 · 20 mins</p>
-      <p class="cuisine">Desserts, Bakery</p>
-    </div>
-  </a>
+    <a href="restaurant5.html" class="restaurant-card">
+      <div class="card-img-wrap">
+        <img src="assets/images/restaurant5.jpg" alt="Sweet Corner">
+        <span class="offer-badge">FREE DELIVERY</span>
+      </div>
+      <div class="card-info">
+        <h3>Sweet Corner</h3>
+        <p class="rating"><span class="rating-badge">★</span>4.6 · 20-25 mins</p>
+        <p class="cuisine">Desserts, Bakery</p>
+      </div>
+    </a>
 
-</section>
-<div id="drawer-overlay" class="drawer-overlay"></div>
-  <aside id="signin-drawer" class="drawer">
-    <h2>Sign In</h2>
-    <input type="text" placeholder="Enter phone number">
-    <button>Continue</button>
-  </aside>
+  </section>
 
   <script src="js/script.js"></script>
 </body>

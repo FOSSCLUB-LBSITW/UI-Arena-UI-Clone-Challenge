@@ -7,45 +7,66 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Swiggy</div>
-    <a href="index.html">Home</a>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">S</div></a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="search.html">Search</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
+    </div>
   </header>
 
-  <section class="help-page">
-    <div class="help-banner">
-     <h1>Help & Support</h1>
-     <p>Let's take a step ahead and help you better.</p>
-    </div>
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+  <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+
+
+  <div class="help-banner">
+    <h1>Help & Support</h1>
+    <p>Let's take a step ahead and help you better.</p>
+  </div>
+
   <div class="help-body">
     <aside class="help-sidebar">
       <div class="help-nav-item active">FAQs</div>
-      <div class="help-nav-item">Orders</div>
-      <div class="help-nav-item">Payments</div>
-      <div class="help-nav-item">Account</div>
     </aside>
-  <div class="help-content">
-  <div class="faq-item">
-    <div class="faq-question">How do I track my order? <span>⌄</span></div>
-    <p class="faq-answer">You can track your order status from the order confirmation page.</p>
-  </div>
 
-  <div class="faq-item">
-    <div class="faq-question">How do I cancel an order? <span>⌄</span></div>
-    <p class="faq-answer">Go to your order history and select cancel within 2 minutes of placing it.</p>
-  </div>
+    <div class="help-content">
+      <div class="faq-item">
+        <div class="faq-question">How do I track my order? <span>⌄</span></div>
+        <p class="faq-answer">You can track your order status from the order confirmation page.</p>
+      </div>
 
-  <div class="faq-item">
-    <div class="faq-question">What payment methods are accepted? <span>⌄</span></div>
-    <p class="faq-answer">We accept UPI, credit/debit cards, net banking, and cash on delivery.</p>
-  </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I cancel an order? <span>⌄</span></div>
+        <p class="faq-answer">Go to your order history and select cancel within 2 minutes of placing it.</p>
+      </div>
 
-  <div class="faq-item">
-    <div class="faq-question">How do I contact support? <span>⌄</span></div>
-    <p class="faq-answer">Use the chat option below or email support@swiggyclone.com.</p>
+      <div class="faq-item">
+        <div class="faq-question">What payment methods are accepted? <span>⌄</span></div>
+        <p class="faq-answer">We accept UPI, credit/debit cards, net banking, and cash on delivery.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I contact support? <span>⌄</span></div>
+        <p class="faq-answer">Use the chat option below or email support@swiggyclone.com.</p>
+      </div>
+    </div>
   </div>
-</div>
-</section>
 
   <script src="js/script.js"></script>
 </body>

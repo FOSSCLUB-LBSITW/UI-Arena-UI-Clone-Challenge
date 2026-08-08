@@ -7,14 +7,44 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Swiggy</div>
-    <a href="index.html">Home</a>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">S</div></a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="search.html">Search</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
+    </div>
   </header>
 
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+
+  <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+ 
   <section class="search-page">
-    <input type="text" id="search-input" placeholder="Search for restaurants and food">
-    <div id="search-results" class="restaurant-grid"></div>
+    <div class="search-bar-wrap">
+      <input type="text" id="search-input" placeholder="Search for restaurants and food">
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <h3 style="padding: 0 20px 16px;">Popular Cuisines</h3>
+    <div class="cuisine-row" id="cuisine-row"></div>
+
+    <div id="search-results"></div>
   </section>
 
   <script src="js/script.js"></script>
