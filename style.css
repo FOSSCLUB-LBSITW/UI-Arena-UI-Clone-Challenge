@@ -751,3 +751,230 @@ nav a:hover {
     color: #777;
 
 }
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+        font-size: 24px;
+    }
+
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 8px;
+    }
+
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+
+    .search-box {
+        padding: 15px;
+
+        font-size: 14px;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+        width: 90%;
+
+        margin: 30px auto;
+    }
+
+
+    .container h2 {
+        font-size: 22px;
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
+        gap: 20px;
+
+        overflow-x: auto;
+
+        padding-bottom: 10px;
+    }
+
+
+    .category {
+        min-width: 70px;
+
+        font-size: 35px;
+    }
+
+
+    .category span {
+        font-size: 12px;
+    }
+
+
+    /* RESTAURANTS */
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .restaurant-card img {
+        height: 200px;
+    }
+
+
+    /* RESTAURANT PAGE */
+
+    .restaurant-header h1 {
+        font-size: 26px;
+    }
+
+
+    /* MENU */
+
+    .menu-item {
+        padding: 20px 0;
+
+        gap: 15px;
+    }
+
+
+    .menu-item h3 {
+        font-size: 16px;
+    }
+
+
+    .menu-item p {
+        font-size: 14px;
+    }
+
+
+    .add-btn {
+        padding: 7px 18px;
+    }
+
+
+    /* CART */
+
+    .cart-item {
+        gap: 15px;
+    }
+
+
+    .cart-item h3 {
+        font-size: 15px;
+    }
+
+
+    .quantity {
+        gap: 8px;
+    }
+
+
+    .cart-total {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    /* SEARCH */
+
+    .search-input {
+        width: 100%;
+
+        padding: 15px;
+    }
+
+
+    /* HELP */
+
+    .help-options button {
+        padding: 17px;
+
+        font-size: 14px;
+    }
+
+
+    /* HELP RESPONSE */
+
+    .help-response {
+        padding: 40px 15px;
+    }
+
+
+    .help-response h1 {
+        font-size: 25px;
+    }
+
+}
