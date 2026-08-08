@@ -1,73 +1,137 @@
-# Swiggy-Inspired Food Delivery Website
+# 🎯 UI ARENA — The UI Clone Challenge
 
-A high-fidelity, responsive food-delivery web app built with React, TypeScript, Vite, Tailwind CSS and React Router, recreating the Swiggy UI/UX: home page, restaurant/menu page, functional cart, a right-side sign-in drawer, a dedicated search page, an offers page, and a Help & Support page.
+**Clone. Code. Conquer.**
 
-## Pages
+A 12-hour solo frontend challenge by **FOSS Club, LBSITW** — recreate a mystery website's homepage, revealed live the moment the event starts.
 
-| Route              | Description                                             |
-|---------------------|----------------------------------------------------------|
-| `/`                 | Home — categories, top restaurant chains, restaurant grid |
-| `/restaurant/:id`   | Restaurant menu with accordions, filters, add-to-cart     |
-| `/search`           | Live search across restaurants and dishes                 |
-| `/offers`           | Coupons, restaurant offers, bank offers                   |
-| `/cart`             | Functional cart / checkout with bill breakdown            |
-| `/help`             | Help & Support with sidebar + FAQ accordion                |
-| Sign In (drawer)    | Opens from the header on every page                        |
+**Repository:** https://github.com/FOSSCLUB-LBSITW/UI-Arena-UI-Clone-Challenge
 
-## Getting started
+---
 
-```bash
-npm install
-npm run dev
-```
+## 📌 Overview
 
-Open the printed local URL (typically http://localhost:5173).
+UI ARENA is a 12-hour frontend development challenge where participants recreate the UI of a popular website. The target website stays confidential until the event begins, making it a surprise challenge for everyone.
 
-## Build for production
+- 🗓️ **Date:** 8 August 2026
+- ⏰ **Time:** 9:00 AM – 9:00 PM
+- 💻 **Mode:** Online
+- 👤 **Participation:** Individual only
+- 🆓 **Entry:** 100% free, no registration fee
+- 📜 **Certificates:** Provided to all participants
 
-```bash
-npm run build
-npm run preview
-```
+## 🎯 Objectives
 
-## Deploying to a live URL
+- Improve participants' frontend development skills
+- Encourage problem-solving and attention to UI detail
+- Provide hands-on experience with Git and GitHub collaboration
 
-### Option A — Vercel (recommended, easiest)
+## ✅ Requirements
 
-1. Push this project to a GitHub repository.
-2. Go to https://vercel.com/new and import that repository.
-3. Vercel auto-detects Vite — leave the defaults (Build Command `npm run build`, Output Directory `dist`) and click **Deploy**.
-4. `vercel.json` is already included so client-side routes (`/restaurant/:id`, `/cart`, etc.) resolve correctly on refresh.
+- Home page matching the given UI
+- Responsive, clean interface
+- Proper folder structure and readable code
 
-### Option B — GitHub Pages
+---
 
-1. Push this project to a GitHub repository, e.g. `github.com/<user>/<repo>`.
-2. In the repo settings, go to **Pages** → set **Source** to **GitHub Actions**.
-3. Push to `main` — the included workflow (`.github/workflows/deploy.yml`) builds the app with the correct base path (`/<repo>/`) and deploys it automatically.
-4. Your site will be live at `https://<user>.github.io/<repo>/`.
-5. A `public/404.html` redirect trick is included so deep links (e.g. `/help`) work correctly on GitHub Pages, which otherwise only serves `index.html` at the root.
+## 🚀 How to Submit
 
-To build locally with the GitHub Pages base path manually:
+Submission happens entirely through a GitHub Pull Request. Follow these steps in order.
+
+### 1. Fork this repository
+
+Click **Fork** (top-right of this repo) to create your own copy under your GitHub account.
+
+### 2. Clone your fork
 
 ```bash
-VITE_BASE=/<repo-name>/ npm run build
+git clone https://github.com/your-username/UI-Arena-UI-Clone-Challenge.git
+cd UI-Arena-UI-Clone-Challenge
 ```
 
-## Project structure
+### 3. Create a branch (recommended)
 
-```
-src/
-├── components/   # Reusable UI building blocks (Header, RestaurantCard, MenuItem, OfferCard, SafeImage, ...)
-├── pages/        # Route-level views (Home, Restaurant, Search, Offers, Cart, Help)
-├── data/         # Local mock data (restaurants, menu, categories, offers, help content)
-├── context/      # CartContext (cart state) and UIContext (sign-in drawer state)
-├── hooks/        # useCart, useUI
-├── types/        # Shared TypeScript interfaces
-└── utils/        # Formatting + image-fallback helpers
+```bash
+git checkout -b my-submission
 ```
 
-## Notes
+### 4. Build the UI
 
-- All data is local/mock — there is no backend.
-- Food and restaurant photos are pulled from a free keyword-based image service (LoremFlickr) at request time, so they need an internet connection to load. Every image goes through a `SafeImage` component with a broader fallback query and, failing that, a styled placeholder icon — so a broken image never reaches the page.
-- Cart state is in-memory (React context) and resets on a full page reload.
+Recreate the homepage revealed at kick-off, using any frontend framework or plain HTML/CSS/JS — your choice.
+
+### 5. Commit your work
+
+Commit in small, frequent stages as you build — not one giant commit at the end.
+
+```bash
+git add .
+git commit -m "Add homepage layout and navbar"
+```
+
+### 6. Push to your fork
+
+```bash
+git push origin my-submission
+```
+
+### 7. Open a Pull Request
+
+- Go to your fork on GitHub — you'll usually see a **"Compare & pull request"** banner. Click it.
+- If not, go to **Pull Requests → New Pull Request**.
+- Confirm the base repository is `FOSSCLUB-LBSITW/ui-arena` and the compare branch is yours.
+- Give it a clear title (your name or username) and a short description of your approach.
+- Click **Create Pull Request**.
+
+Your Pull Request **is** your submission. Only PRs opened within the event window (9:00 AM – 9:00 PM, 8 Aug 2026) will be considered — don't leave this for the last minute.
+
+### Quick command reference
+
+| Step | Command |
+|---|---|
+| Clone | `git clone <your-fork-url>` |
+| Check status | `git status` |
+| Create branch | `git checkout -b <branch-name>` |
+| Stage changes | `git add .` |
+| Commit | `git commit -m "message"` |
+| Push | `git push origin <branch-name>` |
+| Pull latest | `git pull` |
+
+New to Git? A Git guide attached to this repo [`UI_ARENA_Git_Guide.pdf`](./UI_ARENA_Git_Guide.pdf) covers it step by step with instructions.
+
+---
+
+## 🏆 Judging Criteria
+
+| Criteria | Weightage |
+|---|---|
+| UI accuracy & resemblance | 40% |
+| Code quality & structure | 20% |
+| Responsiveness | 20% |
+| Overall UX & design consistency | 20% |
+
+## 🚫 Rules
+
+- Work must be completed **individually**.
+- The target site may only be referenced **after** the challenge is announced.
+- AI screenshot-to-code tools and previewing/prepping the target site before reveal are **not allowed**.
+- Plagiarism or copying another participant's work results in disqualification.
+- Only Pull Requests opened **within the event window** will be considered.
+- Organizers reserve the right to update rules if needed.
+
+## 📞 Event Coordinators
+
+| Name | Contact |
+|---|---|
+| Minnu Lekha V G | +91 91882 26165 |
+| Shreya Ajith | +91 82899 57074 |
+
+
+## 🔗 Links
+
+- **Email:** [fossclub@lbsitw.ac.in](mailto:fossclub@lbsitw.ac.in)
+- **LinkedIn:** [@FOSS Club Lbsitw](https://www.linkedin.com/company/foss-club-lbsitw)
+- **Instagram:** [@foss_club_lbsitw](https://instagram.com/foss_club_lbsitw)
+- **GitHub:** [FOSSCLUB-LBSITW](https://github.com/FOSSCLUB-LBSITW)
+  
+---
+
+<p align="center">Organized with 💚 by <b>FOSS Club, LBSITW</b></p>
