@@ -378,66 +378,71 @@ function showRestaurant(id) {
             r => r.id === id
         );
 
+    if (!restaurant) return;
 
     main.innerHTML = `
 
-        <div class="container">
+        <div class="container restaurant-detail-page">
 
-            <div class="restaurant-header">
+            <button class="back-btn" onclick="showHome()">
+                ← Back to Home
+            </button>
 
-                <h1>
-                    ${restaurant.name}
-                </h1>
-
-
-                <p>
-                    ⭐ ${restaurant.rating}
-                    • ${restaurant.time}
-                </p>
-
-
-                <p>
-                    ${restaurant.food}
-                </p>
-
+            <div class="restaurant-banner-card">
+                <img
+                    src="${restaurant.image}"
+                    alt="${restaurant.name}"
+                    class="restaurant-banner-img"
+                >
+                <div class="restaurant-banner-content">
+                    <h1>${restaurant.name}</h1>
+                    <p class="restaurant-banner-food">🍲 ${restaurant.food}</p>
+                    <div class="restaurant-banner-meta">
+                        <span class="meta-badge rating">⭐ ${restaurant.rating}</span>
+                        <span class="meta-badge time">⏱️ ${restaurant.time}</span>
+                        <span class="meta-badge count">📜 ${restaurant.menu.length} Items</span>
+                    </div>
+                </div>
             </div>
 
+            <h2 style="margin-bottom: 20px;">Full Menu (${restaurant.menu.length} Items)</h2>
 
-            <h2>
-                Menu
-            </h2>
-
-
-            <div class="menu-list">
+            <div class="dish-grid">
 
                 ${restaurant.menu.map(item => `
 
-                    <div class="menu-item">
+                    <div class="dish-card">
 
-                        <div>
-
-                            <h3>
-                                ${item[0]}
-                            </h3>
-
-                            <p>
-                                ₹${item[1]}
-                            </p>
-
+                        <div class="dish-header">
+                            <span class="dish-restaurant-badge">
+                                🍽️ ${restaurant.name}
+                            </span>
+                            <span class="dish-rating">⭐ ${restaurant.rating} • ${restaurant.time}</span>
                         </div>
 
+                        <div class="dish-body">
 
-                        <button
-                            class="add-btn"
-                            onclick="addToCart(
-                                '${item[0]}',
-                                ${item[1]}
-                            )"
-                        >
+                            <div>
+                                <h3 class="dish-title">
+                                    ${item[0]}
+                                </h3>
 
-                            ADD
+                                <p class="dish-price">
+                                    ₹${item[1]}
+                                </p>
+                            </div>
 
-                        </button>
+                            <button
+                                class="add-btn"
+                                onclick="addToCart(
+                                    '${item[0].replace(/'/g, "\\'")}',
+                                    ${item[1]}
+                                )"
+                            >
+                                ADD
+                            </button>
+
+                        </div>
 
                     </div>
 
@@ -448,6 +453,8 @@ function showRestaurant(id) {
         </div>
 
     `;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
 }
 
@@ -1027,7 +1034,7 @@ function showWrongItem() {
 
 }
 
-function showWrongItem() {
+function showMissingItem() {
 
     main.innerHTML = `
 
@@ -1038,17 +1045,15 @@ function showWrongItem() {
             </div>
 
             <h1>
-                We're sorry about that!
+                We're sorry about the missing item!
             </h1>
 
             <p>
-                We understand that receiving the wrong
-                item can be frustrating.
+                We understand how disappointing it is to have an item missing from your order.
             </p>
 
             <p>
-                Our team will look into it and help
-                resolve the issue.
+                Our team will process a refund or replacement right away.
             </p>
 
             <button
