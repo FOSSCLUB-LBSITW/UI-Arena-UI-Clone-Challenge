@@ -1,6 +1,8 @@
 # 🍔 Swiggy UI Clone
 
 **Submitted by:** DEVI CHANDRAN
+
+
 live project link : swiggycloned.netlify.app
 
 This project focuses on recreating the **Swiggy UI** as part of the **UI Arena — UI Clone Challenge**.
