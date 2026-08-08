@@ -1,0 +1,786 @@
+/* swiggy clone - main styles */
+/* colors from actual swiggy */
+:root {
+  --orange: #fc8019;
+  --orange-dark: #e57200;
+  --text-dark: #282c3f;
+  --text-gray: #686b78;
+  --text-light: #93959f;
+  --bg-gray: #f1f1f6;
+  --green: #48c479;
+  --red: #e43b4f;
+  --yellow: #f3c117;
+  --white: #fff;
+  --footer-bg: #02060c;
+  --border: #e9e9eb;
+  --card-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* navbar - styled in Header Perfection CSS at end of file */
+
+.offers-link { position: relative; }
+.new-badge, ._1eox- {
+  color: #ffa700 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  margin-left: 2px !important;
+  vertical-align: super !important;
+  text-transform: uppercase !important;
+}
+
+.cart-link { position: relative; }
+
+/* hero */
+.hero-banner {
+  background: var(--bg-gray);
+  overflow: hidden;
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-inner { width: 100%; height: 100%; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* sections */
+.section-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 20px;
+}
+
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 22px; font-weight: 800;
+  color: var(--text-dark);
+}
+
+.slider-controls { display: flex; gap: 10px; }
+
+/* Swiggy Arrow Controls (sc-tUfxG bGVLMI) */
+.sc-tUfxG.bGVLMI {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.sc-tUfxG.bGVLMI[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.sc-emrHyn.fvspqi {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e2e2e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #02060c;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.sc-tUfxG.bGVLMI:not([disabled]):hover .sc-emrHyn.fvspqi {
+  background: #d0d0d5;
+}
+
+.sc-emrHyn.sc-kDDaHh.fvspqi.iLVdim,
+.sc-tUfxG[disabled] .sc-emrHyn {
+  opacity: 0.45;
+  background: #f2f2f6;
+  color: #93959f;
+}
+
+.sc-pGbXd.aihwO {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* category slider */
+.category-slider-wrap { overflow: hidden; }
+
+.category-slider {
+  display: flex; gap: 16px;
+  transition: transform .4s ease;
+}
+
+.cat-item {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  min-width: 110px; cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  transition: transform .2s;
+}
+.cat-item:hover { transform: scale(1.04); }
+
+.cat-item img {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f0f0f0;
+  border: 2px solid #eee;
+}
+.cat-item span { font-size: 14px; font-weight: 600; color: var(--text-dark); }
+
+/* chains slider */
+.chains-slider-wrap { overflow: hidden; }
+
+.chains-slider {
+  display: flex; gap: 20px;
+  transition: transform .4s ease;
+}
+
+.chain-card {
+  min-width: 260px; max-width: 260px;
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  transition: transform .2s;
+}
+.chain-card:hover { transform: scale(1.02); }
+
+.card-img-wrap {
+  position: relative;
+  width: 100%; height: 170px;
+  background: #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.card-offer-tag {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,.7));
+  color: #fff;
+  padding: 20px 12px 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: .4px;
+}
+
+.card-name { font-size: 16px; font-weight: 700; margin-top: 10px; }
+.card-meta { font-size: 13px; color: var(--text-gray); margin-top: 4px; display: flex; align-items: center; gap: 4px; }
+.rating-star { color: var(--green); font-size: 14px; }
+.card-sub { font-size: 13px; color: var(--text-gray); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-loc { font-size: 13px; color: var(--text-gray); }
+
+/* section divider */
+.section-divider {
+  max-width: 1200px; margin: 8px auto;
+  border-top: 8px solid var(--bg-gray);
+}
+
+/* restaurants grid */
+.restaurants-section,
+section.restaurants-section,
+.section-block.restaurants-section {
+  padding-top: 24px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.filter-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin: 20px 0 28px;
+}
+
+.filter-chip {
+  padding: 8px 14px; border-radius: 100px;
+  border: 1px solid #d4d5d9;
+  background: #fff;
+  font-size: 13px; font-weight: 500;
+  cursor: pointer; color: var(--text-dark);
+  display: flex; align-items: center; gap: 4px;
+  transition: all .2s;
+}
+.filter-chip:hover { border-color: var(--text-dark); }
+.active-filter { background: var(--text-dark); color: #fff; border-color: var(--text-dark); }
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 24px;
+}
+
+.rest-card {
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  transition: transform .2s;
+}
+.rest-card:hover { transform: scale(1.02); }
+
+.rest-card .card-img-wrap { height: 200px; }
+
+/* footer */
+.site-footer {
+  background: var(--footer-bg);
+  color: #aaa;
+  margin-top: 0;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo { height: 28px; filter: brightness(0) invert(1); margin-bottom: 16px; display: block; }
+.footer-tagline { font-size: 13px; margin-bottom: 16px; }
+
+.footer-social { display: flex; gap: 16px; }
+.footer-social a {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid #444;
+  display: flex; align-items: center; justify-content: center;
+  color: #aaa; transition: all .2s;
+}
+.footer-social a:hover { border-color: var(--orange); color: var(--orange); }
+.footer-social svg { width: 16px; height: 16px; }
+
+.footer-col h4 {
+  font-size: 14px; font-weight: 700;
+  color: #ccc;
+  margin-bottom: 16px;
+  text-transform: uppercase; letter-spacing: .5px;
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 13px; color: #888; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--white); }
+
+.cities-list { columns: 2; gap: 8px; }
+
+.footer-bottom {
+  border-top: 1px solid #1a1a1a;
+  max-width: 1200px; margin: 0 auto;
+  padding: 20px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-bottom p { font-size: 13px; }
+
+.app-badges { display: flex; gap: 12px; }
+.app-badge {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid #444; border-radius: 8px;
+  padding: 8px 14px; color: #ccc; font-size: 13px;
+  transition: all .2s;
+}
+.app-badge:hover { border-color: #fff; color: #fff; }
+
+/* signin drawer */
+.drawer-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2000;
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s;
+}
+.drawer-overlay.active { opacity: 1; pointer-events: all; }
+
+.signin-drawer {
+  position: fixed; top: 0; right: -460px; bottom: 0;
+  width: 440px; background: #fff;
+  z-index: 2001;
+  padding: 28px 32px;
+  transition: right .35s ease;
+  box-shadow: -4px 0 24px rgba(0,0,0,.12);
+  overflow-y: auto;
+}
+.signin-drawer.open { right: 0; }
+
+.drawer-close {
+  background: none; border: none;
+  font-size: 20px; cursor: pointer;
+  color: var(--text-dark); position: absolute;
+  top: 24px; right: 24px;
+}
+
+.drawer-content { margin-top: 40px; }
+
+.drawer-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 28px;
+}
+.drawer-header h2 { font-size: 28px; font-weight: 800; }
+.drawer-header p { font-size: 14px; margin-top: 6px; color: var(--text-gray); }
+.create-account-link { color: var(--orange); font-weight: 600; }
+.drawer-underline { width: 36px; height: 3px; background: var(--text-dark); margin-top: 10px; }
+.drawer-food-img { width: 72px; height: 72px; object-fit: contain; }
+
+.form-group { margin-bottom: 16px; }
+.phone-input {
+  width: 100%; padding: 14px 16px;
+  border: 1px solid #d4d5d9; border-radius: 4px;
+  font-size: 15px; font-family: inherit;
+  outline: none; color: var(--text-dark);
+  transition: border-color .2s;
+}
+.phone-input:focus { border-color: var(--text-dark); }
+
+.login-btn {
+  width: 100%; padding: 15px;
+  background: var(--orange); border: none; border-radius: 4px;
+  color: #fff; font-size: 16px; font-weight: 700;
+  cursor: pointer; letter-spacing: 1px;
+  transition: background .2s;
+  font-family: inherit;
+}
+.login-btn:hover { background: var(--orange-dark); }
+
+.terms-text {
+  font-size: 12px; color: var(--text-gray);
+  margin-top: 14px; line-height: 1.6;
+}
+.terms-text a { color: var(--text-dark); font-weight: 600; }
+
+/* responsive */
+@media (max-width: 1100px) {
+  .restaurants-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-right { gap: 16px; }
+  .nav-link span { display: none; }
+  .restaurants-grid { grid-template-columns: repeat(2, 1fr); }
+  .chains-slider .chain-card { min-width: 220px; }
+  .section-title { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .restaurants-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .nav-right { gap: 10px; }
+  .signin-drawer { width: 100%; right: -100%; }
+}
+
+/* Swiggy Logo SVG */
+.swiggy-logo-svg {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
+/* Green Cart Badge when items added */
+.cart-badge-green {
+  background: #60b246;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  margin-right: 4px;
+}
+
+.cart-has-items #cartSvgEmpty {
+  display: none !important;
+}
+
+.cart-has-items .cart-label {
+  color: #60b246 !important;
+  font-weight: 700 !important;
+}
+
+.active-nav-link {
+  color: #FC8019 !important;
+}
+.active-nav-link svg {
+  stroke: #FC8019 !important;
+}
+
+/* Customisation Modal */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 3000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.modal-overlay.open {
+  opacity: 1; pointer-events: all;
+}
+.customise-modal {
+  background: #fff;
+  width: 520px; max-width: 90vw;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+}
+.modal-overlay.open .customise-modal {
+  transform: translateY(0);
+}
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+.modal-item-title { font-size: 18px; font-weight: 700; color: #282c3f; }
+.modal-item-sub { font-size: 14px; color: #686b78; margin-top: 4px; }
+.modal-close-btn {
+  position: absolute; right: 20px; top: 20px;
+  background: none; border: none; font-size: 22px; cursor: pointer; color: #686b78;
+}
+.modal-body {
+  padding: 20px 24px;
+  max-height: 420px; overflow-y: auto;
+}
+.option-group-title { font-size: 15px; font-weight: 700; color: #282c3f; margin-bottom: 14px; }
+.option-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0; border-bottom: 1px solid #f9f9f9;
+  cursor: pointer; font-size: 14px; color: #3d4152;
+}
+.option-left { display: flex; align-items: center; gap: 12px; }
+.custom-radio, .custom-checkbox {
+  accent-color: #60b246; width: 18px; height: 18px; cursor: pointer;
+}
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fafafa;
+}
+.step-indicator { font-size: 14px; font-weight: 600; color: #282c3f; }
+.modal-action-btn {
+  background: #60b246; color: #fff;
+  border: none; padding: 12px 28px;
+  border-radius: 8px; font-size: 15px; font-weight: 700;
+  cursor: pointer; transition: background 0.2s;
+}
+.modal-action-btn:hover { background: #4ca333; }
+
+/* Header Perfection CSS - Matches Real Swiggy Website */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  height: 80px;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.swiggy-header-logo {
+  width: 40px;
+  height: 48px;
+  display: block;
+}
+
+.location-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.location-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
+  border-bottom: 2px solid #282c3f;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.location-btn:hover .location-text {
+  color: #fc8019;
+  border-color: #fc8019;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #fc8019;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3d4152;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-link span {
+  font-weight: 600;
+}
+
+.nav-link svg.ppAwf {
+  fill: #686b78;
+  stroke: none;
+  transition: fill 0.2s ease;
+}
+
+.nav-link svg.corp-icon rect {
+  stroke: #02060c;
+  stroke-opacity: 0.75;
+  transition: stroke 0.2s ease, stroke-opacity 0.2s ease;
+}
+
+.nav-link svg.corp-icon path {
+  fill: #02060c;
+  fill-opacity: 0.75;
+  transition: fill 0.2s ease, fill-opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fc8019 !important;
+}
+
+.nav-link:hover svg.ppAwf {
+  fill: #fc8019 !important;
+}
+
+.nav-link:hover svg.corp-icon rect {
+  stroke: #fc8019 !important;
+  stroke-opacity: 1 !important;
+}
+
+.nav-link:hover svg.corp-icon path {
+  fill: #fc8019 !important;
+  fill-opacity: 1 !important;
+}
+
+.active-nav-link {
+  color: #fc8019 !important;
+  font-weight: 600;
+}
+
+.active-nav-link svg.ppAwf {
+  fill: #fc8019 !important;
+}
+
+.offers-link {
+  position: relative;
+}
+
+.new-badge, ._1eox- {
+  color: #ffa700 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  margin-left: 2px !important;
+  vertical-align: super !important;
+  text-transform: uppercase !important;
+}
+
+/* Swiggy Cart Badge & Icon */
+.QO_nN {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.vZTPh {
+  fill: #fff !important;
+  stroke-width: 2px !important;
+  stroke: #282c3f !important;
+  transition: stroke 0.2s ease;
+}
+
+.PV4Mz {
+  stroke: #60b246 !important;
+  fill: #60b246 !important;
+}
+
+._25bgJ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #282c3f;
+  line-height: 1;
+  pointer-events: none;
+}
+
+._2Fyck ._25bgJ {
+  color: #fff !important;
+}
+
+._2Fyck .vZTPh {
+  stroke: #60b246 !important;
+  fill: #60b246 !important;
+}
+
+.nav-link:hover svg.vZTPh {
+  stroke: #fc8019 !important;
+}
+
+.nav-link:hover ._2Fyck svg.PV4Mz,
+.nav-link:hover svg.PV4Mz {
+  stroke: #fc8019 !important;
+  fill: #fc8019 !important;
+}
+
+.cart-has-items .cart-label-text,
+.cart-has-items span {
+  color: #60b246 !important;
+}
+
+/* Exact Swiggy Logo & Checkout Title from checkout.html */
+.swiggy-exact-logo {
+  width: 49px;
+  height: 49px;
+  display: block;
+}
+
+.secure-checkout-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #02060c;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+/* Interlinking Sections (Best Cuisines & Explore) */
+.sc-FyKfc {
+  margin-bottom: 48px;
+}
+.sc-QcErI {
+  margin-bottom: 24px;
+}
+h2.exSsmv {
+  font-size: 24px;
+  font-weight: 800;
+  color: #02060c;
+  letter-spacing: -0.5px;
+}
+.sc-izEXPo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.sc-buoLT {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(2, 6, 12, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.sc-buoLT:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(2, 6, 12, 0.15);
+}
+.cMMVIK {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(2, 6, 12, 0.75);
+}
+.sc-lbZtsy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(2, 6, 12, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+.sc-lbZtsy:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.cytFqm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.kKhMqT {
+  font-size: 16px;
+  font-weight: 600;
+  color: #02060c;
+}
+.sc-dydjmM {
+  height: 24px;
+}

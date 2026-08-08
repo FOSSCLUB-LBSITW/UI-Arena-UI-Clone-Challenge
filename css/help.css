@@ -1,0 +1,299 @@
+/* ========================================================
+   SWIGGY HELP PAGE - Pixel-Perfect 1:1 Clone
+   ======================================================== */
+
+/* Page background: the entire page is teal/blue-grey */
+body.help-page-body {
+  background-color: #37718e;
+  min-height: 100vh;
+}
+
+/* Navbar stays white, already styled in style.css */
+/* The navbar color is overridden to white on the help page */
+body.help-page-body .navbar {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Nav "HELP" label next to logo */
+.nav-page-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #02060c;
+  margin-left: 14px;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------
+   HELP HERO (title area above the card, on teal bg)
+   -------------------------------------------------------- */
+.help-hero-section {
+  padding: 36px 0 0;
+  /* no background needed - inherits body teal */
+}
+
+.help-hero-inner {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.help-hero-inner h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.2px;
+  font-family: 'Inter', sans-serif;
+}
+
+.help-hero-inner p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --------------------------------------------------------
+   HELP CARD (white floating card below hero)
+   -------------------------------------------------------- */
+.help-main-container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 24px 32px 80px;
+}
+
+.help-card {
+  display: flex;
+  background: #ffffff;
+  min-height: 600px;
+  /* no border-radius per screenshots */
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------
+   LEFT SIDEBAR
+   -------------------------------------------------------- */
+.help-sidebar {
+  width: 190px;
+  flex-shrink: 0;
+  background-color: #f0f2f5;
+  padding: 16px 0;
+}
+
+.help-cat-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-cat-link {
+  display: block;
+  padding: 18px 24px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #535665;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.1s ease;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.help-cat-link:hover {
+  color: #02060c;
+}
+
+/* Active sidebar tab: white bg, bold */
+.help-cat-link.active-help-cat {
+  background-color: #ffffff;
+  color: #02060c;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* --------------------------------------------------------
+   RIGHT CONTENT PANE
+   -------------------------------------------------------- */
+.help-content {
+  flex: 1;
+  padding: 32px 40px 48px;
+  background: #ffffff;
+  border-left: 1px solid #e9e9e9;
+  min-height: 600px;
+  overflow-y: auto;
+}
+
+/* Section show/hide with fade-in animation */
+.help-section {
+  display: none;
+}
+
+.help-section.active-section {
+  display: block;
+  animation: helpFadeIn 0.2s ease-in-out;
+}
+
+@keyframes helpFadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Section heading */
+.help-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #02060c;
+  margin: 0 0 20px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --------------------------------------------------------
+   FAQ ACCORDION
+   -------------------------------------------------------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #e9e9e9;
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #02060c;
+  text-align: left;
+  transition: color 0.15s ease;
+}
+
+/* When open (expanded), the question turns orange */
+.faq-q.open {
+  color: #ff5200;
+}
+
+.faq-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: #686b78;
+  transition: transform 0.2s ease;
+}
+
+.faq-q.open .faq-chevron {
+  transform: rotate(180deg);
+  stroke: #ff5200;
+}
+
+.faq-a {
+  display: none;
+  padding: 0 0 20px 0;
+  font-size: 13.5px;
+  color: #535665;
+  line-height: 1.65;
+  font-family: 'Inter', sans-serif;
+  animation: helpFadeIn 0.15s ease-in-out;
+}
+
+.faq-a.open {
+  display: block;
+}
+
+/* Document list inside answers */
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  color: #535665;
+  font-size: 13.5px;
+  line-height: 2;
+}
+
+/* Orange label text (e.g. "Partner with us") */
+.orange-label {
+  color: #ff5200;
+  font-weight: 600;
+  font-size: 13.5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* "SEND AN EMAIL" button — outlined orange */
+.send-email-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  border: 1.5px solid #ff5200;
+  color: #ff5200;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.send-email-btn:hover {
+  background: #ff5200;
+  color: #ffffff;
+}
+
+/* "Send an email" inline link (lowercase) */
+.orange-link {
+  color: #ff5200;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+}
+
+.orange-link:hover {
+  text-decoration: underline;
+}
+
+/* Long paragraph text in answers (Legal section) */
+.faq-a p {
+  margin: 0 0 10px 0;
+  font-size: 13.5px;
+  color: #535665;
+  line-height: 1.65;
+}
+
+/* "Read More" link in Legal */
+.read-more-link {
+  color: #ff5200;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
