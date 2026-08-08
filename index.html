@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">FoodApp</div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#search">Search</a>
+                <a href="#help">Help</a>
+                <button id="signin-btn">Sign In</button>
+                <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero / Location section -->
+        <section class="hero">
+            <h1>Hungry?</h1>
+            <p>Find your favourite food and restaurants.</p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search for restaurants or dishes"
+                >
+                <button id="search-btn">Search</button>
+            </div>
+        </section>
+
+
+        <!-- Restaurant section -->
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+
+            <div class="restaurant-grid">
+
+                <!-- Restaurant 1 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image">
+                        <!-- Add your image here -->
+                    </div>
+
+                    <div class="restaurant-info">
+                        <h3>Restaurant Name 1</h3>
+                        <p>Indian • North Indian</p>
+                        <p>★ 4.5 • 30-35 mins</p>
+                        <button class="view-restaurant">
+                            View Menu
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Restaurant 2 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image">
+                        <!-- Add your image here -->
+                    </div>
+
+                    <div class="restaurant-info">
+                        <h3>Restaurant Name 2</h3>
+                        <p>Chinese • Asian</p>
+                        <p>★ 4.3 • 25-30 mins</p>
+                        <button class="view-restaurant">
+                            View Menu
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Restaurant 3 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image">
+                        <!-- Add your image here -->
+                    </div>
+
+                    <div class="restaurant-info">
+                        <h3>Restaurant Name 3</h3>
+                        <p>Pizza • Italian</p>
+                        <p>★ 4.6 • 20-25 mins</p>
+                        <button class="view-restaurant">
+                            View Menu
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Restaurant 4 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image">
+                        <!-- Add your image here -->
+                    </div>
+
+                    <div class="restaurant-info">
+                        <h3>Restaurant Name 4</h3>
+                        <p>Burgers • Fast Food</p>
+                        <p>★ 4.2 • 25-30 mins</p>
+                        <button class="view-restaurant">
+                            View Menu
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Restaurant 5 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image">
+                        <!-- Add your image here -->
+                    </div>
+
+                    <div class="restaurant-info">
+                        <h3>Restaurant Name 5</h3>
+                        <p>South Indian • Breakfast</p>
+                        <p>★ 4.4 • 30-35 mins</p>
+                        <button class="view-restaurant">
+                            View Menu
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Search page/section -->
+        <section id="search">
+            <h2>Search</h2>
+
+            <div id="search-results">
+                <!-- Display search results here -->
+            </div>
+        </section>
+
+
+        <!-- Cart -->
+        <section id="cart">
+            <h2>Your Cart</h2>
+
+            <div id="cart-items">
+                <!-- JavaScript will add cart items here -->
+            </div>
+
+            <div class="cart-summary">
+                <p>Total: ₹<span id="cart-total">0</span></p>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </section>
+
+
+        <!-- Help -->
+        <section id="help">
+            <h2>Help</h2>
+
+            <div class="help-options">
+                <button>Order related issues</button>
+                <button>Payment issues</button>
+                <button>Delivery issues</button>
+                <button>Contact support</button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Sign-in drawer -->
+    <aside id="signin-drawer" class="signin-drawer">
+
+        <button id="close-signin">×</button>
+
+        <h2>Sign In</h2>
+
+        <form id="signin-form">
+            <label for="phone">Phone number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+            >
+
+            <button type="submit">
+                Continue
+            </button>
+        </form>
+
+    </aside>
+
+
+    <footer>
+        <p>© 2026 FoodApp</p>
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
