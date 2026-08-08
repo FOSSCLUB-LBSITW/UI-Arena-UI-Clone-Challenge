@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Clone - Sagar Ratna</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">
+  <img src="assets/icons/swiggy-logo.svg" alt="Swiggy" width="24" height="24">
+</div>
+      </a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="search.html">Search</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+ <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+
+  <section class="restaurant-header">
+    <h1>Sagar Ratna</h1>
+    <p class="rating"><span class="rating-badge">★</span>4.1 (18) · 25-30 mins · South Indian, Dosa</p>
+  </section>
+
+  <section class="menu-list">
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Masala Dosa</h3>
+        <p>₹150</p>
+        <p class="item-desc">Crispy rice crepe filled with spiced potato masala</p>
+      </div>
+      <button class="add-btn" data-name="Masala Dosa" data-price="150">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Idli Sambar</h3>
+        <p>₹110</p>
+        <p class="item-desc">Steamed rice cakes served with lentil sambar</p>
+      </div>
+      <button class="add-btn" data-name="Idli Sambar" data-price="110">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Uttapam</h3>
+        <p>₹140</p>
+        <p class="item-desc">Thick savory pancake topped with onions and chilies</p>
+      </div>
+      <button class="add-btn" data-name="Uttapam" data-price="140">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Vada</h3>
+        <p>₹90</p>
+        <p class="item-desc">Crispy fried lentil doughnuts served with chutney</p>
+      </div>
+      <button class="add-btn" data-name="Vada" data-price="90">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Filter Coffee</h3>
+        <p>₹60</p>
+        <p class="item-desc">Traditional South Indian filter coffee</p>
+      </div>
+      <button class="add-btn" data-name="Filter Coffee" data-price="60">ADD</button>
+    </div>
+
+  </section>
+
+  <div id="cart-toast" class="cart-toast">
+    <span id="toast-msg"></span>
+    <a href="cart.html" class="view-cart-link">VIEW CART →</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

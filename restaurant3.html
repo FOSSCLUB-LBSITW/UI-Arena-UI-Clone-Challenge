@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Clone - Pizza Junction</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">
+  <img src="assets/icons/swiggy-logo.svg" alt="Swiggy" width="24" height="24">
+</div>
+      </a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="search.html">Search</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+  <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+
+  <section class="restaurant-header">
+    <h1>Pizza Junction</h1>
+    <p class="rating"><span class="rating-badge">★</span>4.5 (41) · 35-40 mins · Italian, Pizza, Fast Food</p>
+  </section>
+
+  <section class="menu-list">
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Margherita Pizza</h3>
+        <p>₹249</p>
+        <p class="item-desc">Classic cheese and tomato pizza</p>
+      </div>
+      <button class="add-btn" data-name="Margherita Pizza" data-price="249">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot non-veg"></span>
+        <h3>Pepperoni Pizza</h3>
+        <p>₹349</p>
+        <p class="item-desc">Loaded with pepperoni and mozzarella cheese</p>
+      </div>
+      <button class="add-btn" data-name="Pepperoni Pizza" data-price="349">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Garlic Bread</h3>
+        <p>₹129</p>
+        <p class="item-desc">Toasted bread with garlic butter and herbs</p>
+      </div>
+      <button class="add-btn" data-name="Garlic Bread" data-price="129">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Pasta Alfredo</h3>
+        <p>₹230</p>
+        <p class="item-desc">Creamy white sauce pasta with herbs</p>
+      </div>
+      <button class="add-btn" data-name="Pasta Alfredo" data-price="230">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Cheesy Fries</h3>
+        <p>₹150</p>
+        <p class="item-desc">Crispy fries loaded with melted cheese</p>
+      </div>
+      <button class="add-btn" data-name="Cheesy Fries" data-price="150">ADD</button>
+    </div>
+
+  </section>
+
+  <div id="cart-toast" class="cart-toast">
+    <span id="toast-msg"></span>
+    <a href="cart.html" class="view-cart-link">VIEW CART →</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

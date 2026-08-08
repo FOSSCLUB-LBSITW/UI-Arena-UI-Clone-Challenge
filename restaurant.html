@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Clone - Punjabi Tadka</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><div class="logo-icon">
+  <img src="assets/icons/swiggy-logo.svg" alt="Swiggy" width="24" height="24">
+</div>
+      </a>
+      <div class="location-dropdown" id="location-toggle">Other <span class="chevron">⌄</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="search.html">Search</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signin-btn">Sign In</a>
+      <a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <div id="location-overlay" class="drawer-overlay"></div>
+  <aside id="location-panel" class="drawer">
+    <h2>Select Location</h2>
+    <button id="gps-btn" class="gps-btn">📍 Use my current location</button>
+    <input type="text" id="location-search" placeholder="Search for area, street name...">
+  </aside>
+
+  <div id="signin-overlay" class="drawer-overlay"></div>
+<aside id="signin-drawer" class="drawer">
+  <h2>Sign In</h2>
+  <input type="text" placeholder="Enter phone number">
+  <button class="signin-btn-orange">Continue</button>
+</aside>
+
+  <section class="restaurant-header">
+    <h1>Punjabi Tadka</h1>
+    <p class="rating"><span class="rating-badge">★</span>4.3 (23) · 30-35 mins · North Indian, Chinese</p>
+  </section>
+
+  <section class="menu-list">
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Paneer Butter Masala</h3>
+        <p>₹280</p>
+        <p class="item-desc">Rich, creamy tomato-based curry with paneer cubes</p>
+      </div>
+      <button class="add-btn" data-name="Paneer Butter Masala" data-price="280">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot non-veg"></span>
+        <h3>Butter Chicken</h3>
+        <p>₹320</p>
+        <p class="item-desc">Classic creamy tomato chicken curry</p>
+      </div>
+      <button class="add-btn" data-name="Butter Chicken" data-price="320">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Dal Makhani</h3>
+        <p>₹220</p>
+        <p class="item-desc">Slow-cooked black lentils in butter and cream</p>
+      </div>
+      <button class="add-btn" data-name="Dal Makhani" data-price="220">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Chole Bhature</h3>
+        <p>₹190</p>
+        <p class="item-desc">Spiced chickpea curry served with fried bread</p>
+      </div>
+      <button class="add-btn" data-name="Chole Bhature" data-price="190">ADD</button>
+    </div>
+
+    <div class="menu-item">
+      <div class="item-info">
+        <span class="veg-dot"></span>
+        <h3>Veg Fried Rice</h3>
+        <p>₹170</p>
+        <p class="item-desc">Wok-tossed rice with mixed vegetables</p>
+      </div>
+      <button class="add-btn" data-name="Veg Fried Rice" data-price="170">ADD</button>
+    </div>
+
+  </section>
+
+  <div id="cart-toast" class="cart-toast">
+    <span id="toast-msg"></span>
+    <a href="cart.html" class="view-cart-link">VIEW CART →</a>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
