@@ -1,0 +1,31 @@
+{
+  "name": "ui-arena-ui-clone-challenge",
+  "version": "1.0.0",
+  "description": "**Clone. Code. Conquer.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sknikita07-codes/UI-Arena-UI-Clone-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sknikita07-codes/UI-Arena-UI-Clone-Challenge/issues"
+  },
+  "homepage": "https://github.com/sknikita07-codes/UI-Arena-UI-Clone-Challenge#readme",
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "vite": "^8.2.1"
+  }
+}
